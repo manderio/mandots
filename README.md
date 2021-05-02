@@ -29,12 +29,12 @@ A quick neofetch of my current/last installation:
 ```
 
 ### To-do:
-- [] Customize rofi, make it more gruvbox
-- [] Customize polybar, make my own version of it
-- [] Work on my termite fork to set up the keyboard shortcuts better
-- [] Get startup-scripts
-- [] Fix zsh config
-- [] ~~Create installation script~~
+- [ ] Customize rofi, make it more gruvbox
+- [ ] Customize polybar, make my own version of it
+- [ ] Work on my termite fork to set up the keyboard shortcuts better
+- [ ] Get startup-scripts
+- [ ] Fix zsh config
+- [ ] ~~Create installation script~~
 
 ### Section where I can spend time praising other lovely human beings
 Because in this community we all need to show some love to people/tools that are amazing. Give them a hug and thank them for contributing with great things!
