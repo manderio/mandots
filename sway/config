@@ -1,19 +1,15 @@
 # mander's sway config - vim style with hellish keybinds (good luck have fun!)
 
 set $mod Mod4
-set $path ~/.config/sway/
 # can i change out the vars here?
 
 #initial startup
-# TODO: set wallpaper (man 5 sway, output)
 output * bg ~/.config/sway/wallpaper fill
 exec --no-startup-id mako
-# TODO: setup mako, for notifications
-exec --no-startup-id eww dameon
-# TODO: set up eww for bar
+exec --no-startup-id eww dameon & eww open bar
 
 # Font for window titles.
-font pango:monospace 8 
+font "Source Code Pro 8" 
 
 # use xbacklight to adjust backlight
 # if this does NOT work, try backlightctl instead
@@ -30,19 +26,13 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+Return exec alacritty
 
 # take a screenshot
-# TODO: use grim/slurp instead
-# i used to use
-#     bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy --type image/png
-# to screenshot regions
-# grim - | tee "$(date +'%M').png" | wl-copy
-bindsym --release shift+Print exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png # slurp
-bindsym --release Print exec grim | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png # grim
+bindsym --release shift+Print exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
+bindsym --release Print exec grim | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start rofi
-# TODO: use wofi or the other one instead (i think rofi also has a wayland branch now?)
 bindsym $mod+Shift+period exec rofi -modi drun -show drun -theme sidebar -font "Source Code Pro 10" 
 
 # movingg around
@@ -66,7 +56,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 #TODO: add lockscreen (swaylock)
-bindsym $mod+shift+x # add thing
+bindsym $mod+shift+x exec swaylock
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -114,7 +104,6 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 # exit sway (logs you out of your wayland session)
 bindsym $mod+Shift+e exit
-# TO-DO: set up eww
 
 ### appearance ###
 
@@ -129,7 +118,9 @@ default_border pixel 1
 
 # class                 border  backgr. text    indicator child_border
 # TODO: client.unfocused, client.focused_inactive
-client.focused          #ebdbb2 #ebdbb2 #282828 #ebdbb2   #ebdbb2
+client.focused          #ebdbb2ff #ebdbb2ff #282828ff #ebdbb2ff #ebdbb2ff
+client.unfocused        #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
+client.focused_inactive #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
 
 # floating windows
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enabled
@@ -143,8 +134,6 @@ floating_maximum_size 1000 x 650
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
-
-        # same bindings, but for the arrow keys
         bindsym h resize shrink width 1 px or 1 ppt
         bindsym j resize grow height 1 px or 1 ppt
         bindsym k resize shrink height 1 px or 1 ppt
@@ -159,22 +148,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 input * {
-        xkb_options compose:ralt # TODO: figure out if ralt is correct
+        xkb_options compose:alt_r # TODO: figure out if ralt is correct
 }
-
-exec_always ./polybar
-# to-do: add correct path and bar
-
-# TODO: configure to use eww (man 5 sway-bar)
-bar {
-    position top
-    gaps 6
-    font "GoMono 8"
-    colors {
-        statusline #586e75
-        background #feffee00
-        inactive_workspace #feffee00 #feffee00 #889ea5
-        focused_workspace #ddd6c3 #feffee00 #586e75
-    }
-    status_command $XDG_CONFIG_HOME/sway/status_command
-}
+xwaylandsupport enable
