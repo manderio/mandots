@@ -4,7 +4,7 @@ set $mod Mod4
 
 
 #initial startup
-output "*" bg /home/mander/.config/sway/wallpaper fill
+output "*" bg /home/mander/.config/media/forest_fog_sunlight.jpg fill
 exec --no-startup-id mako
 exec --no-startup-id eww dameon & eww open bar
 
@@ -148,7 +148,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 input * {
-        xkb_layout "sv"
-        xkb_options compose:alt_r # TODO: figure out if ralt is correct
+        xkb_layout se
+        # xkb_options compose:altr # TODO: figure out if ralt is correct
 }
-xwaylandsupport enable
