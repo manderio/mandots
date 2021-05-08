@@ -1,7 +1,6 @@
 # mander's sway config - vim style with hellish keybinds (good luck have fun!)
 
 set $mod Mod4
-# can i change out the vars here?
 
 #initial startup
 output * bg ~/.config/sway/wallpaper fill
