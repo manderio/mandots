@@ -2,7 +2,6 @@
 
 set $mod Mod4
 
-
 #initial startup
 output "*" bg /home/mander/.config/media/forest_fog_sunlight.jpg fill
 exec --no-startup-id mako
@@ -151,3 +150,4 @@ input * {
         xkb_layout se
         # xkb_options compose:altr # TODO: figure out if ralt is correct
 }
+
