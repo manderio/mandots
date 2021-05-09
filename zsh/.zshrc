@@ -15,13 +15,15 @@ autoload -Uz vcs_info
 precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
-RPROMPT=\$vcs_info_msg_0_
 zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # prompt
-PROMPT='%(?.%F{175}%n%F{223}@%F{cyan}%m.%F{magenta}%n%F{grey}@%F{166}%m %?) %f %B%F{yellow}%1~%f%b %F{223}%# '
-RPROMPT='%F{223} | %*'
+PROMPT='%(?.%F{175}%n%F{223}@%F{cyan}%m.%F{magenta}%n%F{grey}@%F{166}%m %?) %F{223}%# '
+RPROMPT=\$vcs_info_msg_0_'%f %B%F{yellow}%1~%f%b %F{223}|%F{223} %*'
+
+# path addition
+export PATH="$HOME/.cargo/bin:$PATH" 
 
 # tbsm
 case $(tty) in 
