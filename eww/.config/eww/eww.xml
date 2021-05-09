@@ -4,21 +4,57 @@
     </includes>
 
     <definitions>
+        <!-- the bar itself -->
         <def name="bar">
             <box orientation="h" hexpand="true">
-                <time/>
+                <leftside/>
+                <centerside/>
+                <rightside/>
             </box>
         </def>
 
+        <!-- defining sections of eww bar -->
+            <def name="leftside" orientation="h" space-evenly="false" halign="start">
+                <box>
+                    <workspaces/>
+                 </box>
+            </def>
+            <def name="centerside" orientation="h" space-evenly="true" halign="center">
+                <box>
+                    <time/>
+                </box>
+            </def>
+            <def name="rightside" orientation="h" space-evenly="false" halign="end">
+                <box>
+                    <sysinfo/>
+                </box>
+            </def>
+
+        <!-- left side modules -->
+        <def name="workspaces" halign="start">
+            <box>{{getWorkspaces}}</box>
+        </def>
+
+        <!-- center modules -->
         <def name="time" halign="center">
             <box>{{getTime}}</box>
         </def>
+
+        <!-- right side modules -->
+        <def name="sysinfo" halign="end">
+            <box>{{getInfo}}</box>
+        </def>
+
     </definitions>
 
+    <!-- script variables -->
     <variables>
+        <script-var name="getWorkspaces">echo "workspaces"</script-var>
+        <script-var name="getInfo">echo "things"</script-var>
         <script-var name="getTime" interval="1s">date +%R":"%S" | "%a" "%d" "%b" "%Y</script-var>
     </variables>
 
+    <!-- loaded windows and their settings -->
     <windows>
         <window name="bar" stacking="bt" screen="0" exclusive="true">
             <geometry anchor="top center" x="0px" y="0px" width="100%" height="25px"/>
