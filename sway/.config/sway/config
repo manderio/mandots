@@ -5,7 +5,8 @@ set $mod Mod4
 #initial startup
 output "*" bg /home/mander/.config/media/forest_fog_sunlight.jpg fill
 exec --no-startup-id mako
-exec --no-startup-id eww dameon & eww open bar
+exec --no-startup-id eww dameon
+exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
 
 # Font for window titles.
 font "Source Code Pro 8" 
