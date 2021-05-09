@@ -115,7 +115,6 @@ default_border pixel 1
  smart_borders on
 
 # class                 border  backgr. text    indicator child_border
-# TODO: client.unfocused, client.focused_inactive
 client.focused          #ebdbb2ff #ebdbb2ff #282828ff #ebdbb2ff #ebdbb2ff
 client.unfocused        #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
 client.focused_inactive #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
@@ -124,7 +123,6 @@ client.focused_inactive #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enabled
 for_window [class="Lxappearance" instance="lxappearance"] floating enabled
 for_window [class="pulseeffects" instance="pulseeffects"] floating enabled
-for_window [app_id="Chromium"] border csd
 
 # floating settings
 floating_minimum_size 75 x 50
