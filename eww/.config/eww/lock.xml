@@ -1,0 +1,68 @@
+<eww>
+	<includes>
+
+	</includes>
+
+	<definitions>
+		<def name="main">
+			<box spacing="10px" space-evenly="True">
+			<topLeft/>
+			<topRight/>
+			<bottomLeft/>
+			<bottomRight/>
+		</box>
+	</def>
+	<!-- the individual parts of the main config, this is to make it easier to define styles etc -->
+		<def name="topLeft" valign="end" halign="start">
+			<box>This is top left</box>
+			<box class="userProfile">
+				{{userInfo}}
+			</box>
+		</def>
+
+		<def name="topRight" valign="end" halign="end">
+			<box>this is top right</box>
+			<box halign="start">{{fetch}}</box>
+			<box name="time" halign="end" orientation="v">
+				{{hour}}
+				{{min}}{{sec}}
+			</box>
+		</def>
+
+		<def name="bottomLeft" valign="start" halign="start">
+			<box>this is bottom left</box>
+			<box name="cal" orientation="h">
+				<calendar day=1 month=1 year=1970>
+			</box>
+			<box name="remanders" orientation="h">{{remander}}</box>
+		</def>
+		
+		<def name="bottomRight" valign="start" halign="end">
+			<box>this is bottom right</box>
+			<box>
+		</def>
+	</definitions>
+
+	<variables>
+		<!-- custom scripts/programs -->
+		<script-var name="remander" interval="1m">remander -l</script-var> <!-- yes i will implement remander for this -->
+		<script-var name="userInfo">userinfo</script-var> <!-- create script that outputs a svg with user information -->
+		<script-var name="fetch">fetch</script-var> <!-- write a fetch script for this -->
+		<script-var name="notifs" interval="1s"></script-var>
+
+		<!-- some clock stuff -->
+		<script-var name="hour"> date +%h</script-var>
+		<script-var name="min"> date +%m</script-var>
+		<script-var name="sec"> date +%s</script-var>
+
+	</variables>
+
+	<windows>
+		<window name="main" stacking="fg" screen="0">
+			<geometry anchor="center" width="500px" height="500px">
+				<widget class="global">
+					<main/>
+		</widget>
+	</windows>
+
+</eww>
