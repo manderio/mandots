@@ -42,7 +42,8 @@
 
         <!-- right side modules -->
         <def name="sysinfo" halign="end">
-            <box>{{getInfo}}</box>
+		<box>{{getInfo}}</box>
+		<box>{{EWW_BATTERY}}</box>
         </def>
 
     </definitions>
@@ -51,7 +52,7 @@
     <variables>
         <script-var name="getWorkspaces">echo "workspaces"</script-var>
         <script-var name="getInfo">echo "things"</script-var>
-        <script-var name="getTime" interval="1s">date +%R":"%S" | "%a" "%d" "%b" "%Y</script-var>
+        <script-var name="getTime" interval="1s">date +"%R:%S | %a %d %b %Y"</script-var>
     </variables>
 
     <!-- loaded windows and their settings -->
