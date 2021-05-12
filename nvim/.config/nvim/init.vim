@@ -12,12 +12,16 @@ Plug 'vim-python/python-syntax'
 " coc plugin, language server support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" gruvbox theme plugin
+" gruvbox plugin
 Plug 'morhetz/gruvbox'
+
+" fix colors (hopefully)
+Plug 'godlygeek/csapprox'
 
 " Initialize plugin system
 call plug#end()
 
+" fix keymaps
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
@@ -38,8 +42,14 @@ nnoremap <C-Right> <Nop>
 vnoremap <C-Left> <Nop>
 vnoremap <C-Right> <Nop>
 
-" set up line breaks and tab
+" fix linebreaks
 :set linebreak
 :set expandtab
 :set shiftwidth=4
+
+" set up the best colorscheme
+:let g:gruvbox_contrast_dark='(hard)'
 :colorscheme gruvbox
+:set background=dark
+
+:let g:coc_disable_startup_warning = 1
