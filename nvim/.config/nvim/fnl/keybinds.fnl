@@ -8,6 +8,8 @@
             trouble trouble}
    require-macros [macros]})
 
+(utils.keymap :n :MM "<cmd>lua require('nvim-gehzu').go_to_definition()<CR>" {})
+(utils.keymap :n :MN "<cmd>lua require('nvim-gehzu').show_definition()<CR>" {})
 
 (utils.keymap :i :<C-Space> "compe#complete()" {:expr true})
 (utils.keymap :i :<esc> "compe#close('<esc>')" {:expr true})

@@ -15,8 +15,8 @@
 
         <!-- defining sections of eww bar -->
             <def name="leftside" orientation="h" space-evenly="false" halign="start">
-                <box>
-                    <workspaces/>
+                <box class="workspaces">
+                    <workspaces/> |
                  </box>
             </def>
             <def name="centerside" orientation="h" space-evenly="true" halign="center">
@@ -31,8 +31,8 @@
             </def>
 
         <!-- left side modules -->
-        <def name="workspaces" halign="start">
-            <box>{{getWorkspaces}}</box>
+	    <def name="workspaces" halign="start">
+		<literal content="{{getWorkspaces}}"></literal>
         </def>
 
         <!-- center modules -->
@@ -49,7 +49,7 @@
 
     <!-- script variables -->
     <variables>
-        <script-var name="getWorkspaces">echo "workspaces"</script-var>
+	<script-var name="getWorkspaces">./scripts/workspaces/target/release/workspaces</script-var>
         <script-var name="getInfo">echo "things"</script-var>
         <script-var name="getTime" interval="1s">date +"%R:%S | %a %d %b %Y"</script-var>
     </variables>
