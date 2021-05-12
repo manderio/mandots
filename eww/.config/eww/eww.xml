@@ -6,7 +6,7 @@
     <definitions>
         <!-- the bar itself -->
         <def name="bar">
-            <box orientation="h" hexpand="true">
+           <box orientation="h" hexpand="true" class="bar">
                 <leftside/>
                 <centerside/>
                 <rightside/>
@@ -15,24 +15,24 @@
 
         <!-- defining sections of eww bar -->
             <def name="leftside" orientation="h" space-evenly="false" halign="start">
-                <box>
+                <box class="workspaces">
                     <workspaces/>
                  </box>
             </def>
             <def name="centerside" orientation="h" space-evenly="true" halign="center">
-                <box>
+                <box class="time">
                     <time/>
                 </box>
             </def>
             <def name="rightside" orientation="h" space-evenly="false" halign="end">
-                <box>
+                <box class="sysinfo">
                     <sysinfo/>
                 </box>
             </def>
 
         <!-- left side modules -->
         <def name="workspaces" halign="start">
-            <box>{{getWorkspaces}}</box>
+            <box>{{getWorkspaces}} | </box>
         </def>
 
         <!-- center modules -->
