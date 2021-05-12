@@ -75,9 +75,7 @@
     (if (= "master" branch) "" branch)))
   
 (set galaxyline.section.right
-  [{:GitBranch {:provider git-branch-provider
-                :highlight [colors.light4 colors.dark1]}} 
-   {:FileType {:provider (fn [] nvim.bo.filetype)
+  [   {:FileType {:provider (fn [] nvim.bo.filetype)
                :highlight [colors.neutral_aqua colors.dark1]}}
 
    {:DiagnosticInfo {:provider (make-lsp-diagnostic-provider "Info")

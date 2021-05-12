@@ -42,8 +42,7 @@
 
         <!-- right side modules -->
         <def name="sysinfo" halign="end">
-		<box>{{getInfo}}</box>
-		<box>{{EWW_BATTERY}}</box>
+	    <box>{{EWW_BATTERY}}</box>
         </def>
 
     </definitions>

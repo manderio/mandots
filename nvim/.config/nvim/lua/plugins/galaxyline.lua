@@ -99,7 +99,7 @@ end
 local function _4_()
   return (" " .. gl_fileinfo.line_column() .. " ")
 end
-galaxyline.section.right = {{GitBranch = {highlight = {colors.light4, colors.dark1}, provider = git_branch_provider}}, {FileType = {highlight = {colors.neutral_aqua, colors.dark1}, provider = _3_}}, {DiagnosticInfo = {highlight = {colors.dark1, colors.neutral_blue}, provider = make_lsp_diagnostic_provider("Info")}}, {DiagnosticWarn = {highlight = {colors.dark1, colors.neutral_yellow}, provider = make_lsp_diagnostic_provider("Warning"), separator = ""}}, {DiagnosticError = {highlight = {colors.dark1, colors.bright_red}, provider = make_lsp_diagnostic_provider("Error"), separator = ""}}, {LineInfo = {highlight = "GalaxyViMode", provider = _4_, separator = ""}}}
+galaxyline.section.right = {{FileType = {highlight = {colors.neutral_aqua, colors.dark1}, provider = _3_}}, {DiagnosticInfo = {highlight = {colors.dark1, colors.neutral_blue}, provider = make_lsp_diagnostic_provider("Info")}}, {DiagnosticWarn = {highlight = {colors.dark1, colors.neutral_yellow}, provider = make_lsp_diagnostic_provider("Warning"), separator = ""}}, {DiagnosticError = {highlight = {colors.dark1, colors.bright_red}, provider = make_lsp_diagnostic_provider("Error"), separator = ""}}, {LineInfo = {highlight = "GalaxyViMode", provider = _4_, separator = ""}}}
 local function add_segment_defaults(data)
   return a.merge({highlight = {colors.light0, colors.dark1}, separator = " ", separator_highlight = "StatusLine"}, data)
 end
