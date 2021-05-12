@@ -36,9 +36,11 @@ A quick neofetch of my current/last installation:
 
 ### Applying the dots 
 To add dots, which if you're not mander, I do not quite get why you would want to, but you may, as long as you let people know where you got them, go ahead and use. Everything is managed by stow, so run the following:
+
 ``sh -c 'echo [a-z]*'``
 
 In case that doesn't work, try running the following: 
+
 ``for f in *; do case $f in [a-z]*) [[ -d "$f" ]] && stow --dir=~/dotfiles -t ~ "$f";; esac; done``
 
 ### Note for wayland branch
