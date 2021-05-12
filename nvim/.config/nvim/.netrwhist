@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/home/mander/dotfiles/rofi/.config/rofi'
-let g:netrw_dirhist_2='/home/mander/dotfiles/rofi/.config'
-let g:netrw_dirhist_3='/home/mander/dotfiles/rofi/.config/rofi'
-let g:netrw_dirhist_4='/home/mander/dotfiles/rofi/.config/rofi/themes'
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/mander/.config/sway'
+let g:netrw_dirhist_5='/home/mander/.config/dunst'
+let g:netrw_dirhist_4='/home/mander/.config/sway'
+let g:netrw_dirhist_3='/home/mander/.config/mako'
+let g:netrw_dirhist_2='/home/mander/.local/share/applications'
+let g:netrw_dirhist_1='/home/mander/.local/share/desktop-directories'

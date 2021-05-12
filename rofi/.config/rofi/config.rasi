@@ -1,6 +1,6 @@
 configuration {
  modi: "drun";
- theme: "sidebar";
- font: "Source Code Pro 10";
+ theme: "gruv-sidebar";
+ font: "Source Code Pro 11";
 }
-@import "themes/sidebar.rasi"
+@import "themes/gruv-sidebar.rasi"
