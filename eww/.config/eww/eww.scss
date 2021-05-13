@@ -1,23 +1,28 @@
 // to-do: move colors to global location
+$bg: #1d2021;
+$fg: #ebdbb2;
+
 
 * {
     all: unset;
 }
 
-/* window {
+window {
     background-color: $bg;
     color: $fg;
     font-family: 'Source Code Pro';
     font-size: 14px;
-} */
+}
 
 .bar {
 	background-color: $bg;
 	border-bottom-style: solid;
 	border-bottom-color:$fg;
-	border-width: 2px;
+	border-width: 1px;
 	color: $fg;
 }
 
-.sysinfo {
+.test {
+	background-color: $bg;
+	color: $fg;
 }

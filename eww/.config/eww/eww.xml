@@ -6,17 +6,22 @@
     <definitions>
         <!-- the bar itself -->
         <def name="bar">
-            <box orientation="h" hexpand="true">
+            <box orientation="h" hexpand="false" space-evenly="true">
                 <leftside/>
                 <centerside/>
                 <rightside/>
             </box>
-        </def>
+	</def>
+	<def name="test">
+	    <box orientation="h" hexpand="false">
+		<info/>
+	    </box>
+	</def>
 
         <!-- defining sections of eww bar -->
             <def name="leftside" orientation="h" space-evenly="false" halign="start">
                 <box class="workspaces">
-                    <workspaces/> |
+                    <workspaces/>|
                  </box>
             </def>
             <def name="centerside" orientation="h" space-evenly="true" halign="center">
@@ -24,7 +29,7 @@
                     <time/>
                 </box>
             </def>
-            <def name="rightside" orientation="h" space-evenly="false" halign="end">
+            <def name="rightside" orientation="h" space-evenly="true" halign="end">
                 <box>
                     <sysinfo/>
                 </box>
@@ -42,8 +47,16 @@
 
         <!-- right side modules -->
         <def name="sysinfo" halign="end">
-	    <box>{{EWW_BATTERY}}</box>
-        </def>
+	    <box> |  {{round((EWW_NET[getNet].NET_UP) * 8 / (1024 * 1024), 2)}}  {{round((EWW_NET[getNet].NET_DOWN) * 8 / (1024 * 1024), 2)}} |  {{EWW_RAM}} |  {{round((EWW_DISK["/"].free) / (1024 * 1024 * 1024), 2)}} |  {{EWW_BATTERY.BAT0.capacity}}</box>
+	</def>
+
+	<!-- test section -->
+        <def name="info">
+	    <box class="test">
+		This is for testing, please ignore me!
+	    </box>
+	</def>
+	<!-- end of test section -->
 
     </definitions>
 
@@ -51,7 +64,9 @@
     <variables>
 	<script-var name="getWorkspaces">./scripts/workspaces/target/release/workspaces</script-var>
         <script-var name="getInfo">echo "things"</script-var>
-        <script-var name="getTime" interval="1s">date +"%R:%S | %a %d %b %Y"</script-var>
+	<script-var name="getTime" interval="1s">date +"%R:%S | %a %d %b %Y"</script-var>
+	<script-var name="getNet" interval="2s">./scripts/getNet.sh</script-var>
+	<script-var name="batStatus" interval="1m">echo "hello there"</script-var>
     </variables>
 
     <!-- loaded windows and their settings -->
@@ -61,6 +76,12 @@
             <widget>
                 <bar/>
             </widget>
-        </window>
+	</window>
+	<window name="test" stacking="bg" screen="0" exclusive="true">
+	    <geometry anchor="bottom center" x="0px" y="0px" width="500px" height="200px"/>
+	    <widget>
+		<test/>
+	    </widget>
+	</window>
     </windows>
 </eww>
