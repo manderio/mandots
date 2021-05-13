@@ -5,6 +5,7 @@
   :nvim-telescope/telescope.nvim {:mod "plugins.telescope"
                                   :requires [:nvim-lua/popup.nvim :nvim-lua/plenary.nvim]}
 
+  :elkowar/nvim-gehzu {}
   :p00f/nvim-ts-rainbow {}
   :romgrk/nvim-treesitter-context {}
   :JoosepAlviste/nvim-ts-context-commentstring {}

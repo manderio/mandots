@@ -60,6 +60,8 @@
 (when (not (vim.fn.has "gui_running"))
   (set vim.o.t_Co 256))
 
+(set vim.g.gruvbox_contrast_dark "hard")
+
 (vim.cmd "colorscheme gruvbox")
 (vim-let &t_ut "")
 
