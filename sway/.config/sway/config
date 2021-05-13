@@ -3,7 +3,7 @@
 set $mod Mod4
 
 #initial startup
-output "*" bg /home/mander/.config/media/forest_fog_sunlight.jpg fill
+output "*" bg /home/mander/.config/media/wallpaper.png fill
 exec --no-startup-id mako
 exec --no-startup-id eww dameon
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
@@ -26,7 +26,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym $mod+Return exec alacritty
 
 # take a screenshot
-bindsym --release shift+Print exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
+bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
 bindsym --release Print exec grim | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
 
 # kill focused window
@@ -107,7 +107,7 @@ bindsym $mod+Shift+e exit
 ### appearance ###
 
 # gaps
- gaps inner 10
+ gaps inner 25
 
 # borders
 default_border pixel 1
@@ -117,8 +117,8 @@ default_border pixel 1
 
 # class                 border  backgr. text    indicator child_border
 client.focused          #ebdbb2ff #ebdbb2ff #282828ff #ebdbb2ff #ebdbb2ff
-client.unfocused        #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
-client.focused_inactive #ebdbb200 #ebdbb200 #28282800 #ebdbb200 #ebdbb200
+client.unfocused        #ebdbb255 #ebdbb255 #28282855 #ebdbb255 #ebdbb255
+client.focused_inactive #ebdbb255 #ebdbb255 #28282855 #ebdbb255 #ebdbb255
 
 # window setup
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enabled
