@@ -3,7 +3,10 @@
 These are my dots for my current setup. I use a lot of standard configs, this is mainly for my own sake and backup. If you wish to use, go ahead, but do know that my setup is very much mander specific. Main edits are the ones regarding the i3 keyboard shortcuts. Everything is vim styled.
 
 ### Information about my system
-// need to set up an image here instead of the fetch
+CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration. Running arch linux with Wayland, a lil preview of my system while I do some eww config, please don't read too much into it, you might get a headache:
+
+![image](https://user-images.githubusercontent.com/59826300/118188938-70023980-b441-11eb-8648-40078b36a31a.png)
+
 
 ### To-do:
 - [x] Customize rofi, make it more gruvbox
