@@ -40,11 +40,11 @@ Because in this community we all need to show some love to people/tools that are
 - [stow](https://www.gnu.org/software/stow/), symlink farm manager for my dotfiles
 - [tbsm](https://github.com/loh-tar/tbsm), a login manager that allows you to log in straight from the terminal! 
 - [rofi](https://github.com/davatorium/rofi), a manager that i use along with [dmenu](https://tools.suckless.org/dmenu/)
-- [nvim](https://github.com/neovim/neovim), what happens if you imorove vi twice? this. this is what happens. It's gret!
-- [zsh](https://www.zsh.org/), my shell that I use ~~currently the config is too much of a mess for me to upload it here though~~
+- [nvim](https://github.com/neovim/neovim), what happens if you improve vi twice? this. this is what happens. It's great!
+- [zsh](https://www.zsh.org/), the shell that I use ~~currently the config is too much of a mess for me to upload it here though~~
 
 ### Credit to people who are more talented than me
-Note that while I no longer ues some of these, I will still always appreciate and credit the people helping me out below!
+Note that while I no longer use some of these, I will still always appreciate and credit the people helping me out below!
 - Vim is very much ~~mainly~~all configured ~~with the help of~~ by [Elkowar](https://github.com/elkowar), he's also been a huge help for everything eww related and patiently standing my feedback, as well as my "I BROKE EWW AGAIN :D", so please give him a hug from me and contribewwt
 - Gruvbox, the superior color scheme, can be found [here](https://github.com/morhetz/gruvbox)
 - Rofi was using the standard sidebar theme, can be found in the original package linked above, in the new dots I've switched out the colors and made it a bit more gruvbox to fit my overall theme
@@ -56,5 +56,5 @@ Note that while I no longer ues some of these, I will still always appreciate an
 might be viable alternatives for someone looking for a similar wm
 - [i3-gaps](https://github.com/Airblader/i3), a fork of [i3](https://i3wm.org/) that adds gaps to the config
 - [termite](https://github.com/thestinger/termite), a terminal with keybind support, yay! less mouse usage!
-- [autorandr](https://github.com/phillipberndt/autorandr), life savior if you are using multiple monitors for i3
+- [autorandr](https://github.com/phillipberndt/autorandr), lifesaver if you are using multiple monitors for i3
 - [dunst](https://github.com/dunst-project/dunst), notification dameon, my config is broken, but the tool is lovely
