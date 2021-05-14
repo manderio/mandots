@@ -1,0 +1,31 @@
+# mako configuration file
+
+# text
+font=Source Code Pro 10
+text-alignment=left
+format="<b>%a | %s</b>\n%b"
+
+# colors
+background-color=#282828
+text-color=#ebdbb2
+border-color=#ebdbb2
+
+# size
+width=250
+height=100
+margin=30,30
+padding=5
+border-size=1
+
+# position
+layer=overlay
+anchor=bottom-right
+
+# other
+icons=0
+actions=0
+history=1
+ignore-timeout=1
+default-timeout=30000
+max-visible=3
+markup=0
