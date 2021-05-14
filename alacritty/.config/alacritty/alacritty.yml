@@ -17,6 +17,9 @@
 window:
   startup_mode: Windowed
   decorations: full
+  padding:
+    x: 15 
+    y: 15 
 
 scrolling:
   history: 15000
