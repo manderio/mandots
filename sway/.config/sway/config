@@ -112,9 +112,6 @@ bindsym $mod+Shift+e exit
 # borders
 default_border pixel 1
 
-# Activate smart borders (always)
- smart_borders on
-
 # class                 border  backgr. text    indicator child_border
 client.focused          #ebdbb2ff #ebdbb2ff #282828ff #ebdbb2ff #ebdbb2ff
 client.unfocused        #ebdbb255 #ebdbb255 #28282855 #ebdbb255 #ebdbb255
