@@ -5,7 +5,7 @@ set $mod Mod4
 #initial startup
 output "*" bg /home/mander/.config/media/wallpaper.png fill
 exec --no-startup-id mako
-exec --no-startup-id eww dameon
+exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
 
 # Font for window titles.
