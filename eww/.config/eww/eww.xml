@@ -7,8 +7,10 @@
         <!-- the bar itself -->
         <def name="bar">
             <box orientation="h" hexpand="false" space-evenly="true">
-                <leftside/>
-                <centerside/>
+		<leftside/>
+		<divider/>
+		<centerside/>
+		<divider/>
                 <rightside/>
             </box>
 	</def>
@@ -21,7 +23,7 @@
         <!-- defining sections of eww bar -->
             <def name="leftside" orientation="h" space-evenly="false" halign="start">
                 <box class="workspaces">
-                    <workspaces/>|
+                    <workspaces/>
                  </box>
             </def>
             <def name="centerside" orientation="h" space-evenly="true" halign="center">
@@ -49,6 +51,10 @@
         <def name="sysinfo" halign="end">
 	    <box> |  {{round((EWW_NET[getNet].NET_UP) * 8 / (1024 * 1024), 2)}}  {{round((EWW_NET[getNet].NET_DOWN) * 8 / (1024 * 1024), 2)}} |  {{EWW_RAM}} |  {{round((EWW_DISK["/"].free) / (1024 * 1024 * 1024), 2)}} |  {{EWW_BATTERY.BAT0.capacity}}</box>
 	</def>
+	<def name="divider">
+	    <box>   </box>
+	</def>
+
 
 	<!-- test section -->
         <def name="info">
