@@ -55,24 +55,54 @@ window {
 	border-bottom-style: double;
 	border-bottom-color:$fg;
 	border-width: 1px;
-	color: $fg;
+	color: $gray;
 }
 
 .workspaces {
 	padding-left: 5px;
 	padding-right: 10px;
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-color: $bg0_h $fg $bg0_h;
 }
 
 .workspace {
 	padding-left: 5px;
 	padding-right: 10px;
+	font-family: 'Source Code Pro';
+	font-size: 14px;
 }
+
 .workspace.focused {
 	color: $orange;
-	font-family: 'Source Code Pro';
 	font-weight: bold;
 }
 
 .workspace.unfocused {
 	color: $gray;
+}
+
+.divider {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sysinfo {
+	border-top-style: solid;
+	border-top-width: 3px;
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-color: $bg0_h;
+}
+
+.sysinfo.sect {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.sysinfo.bat {
+	padding-left: 10px;
+	padding-right: 10px;
 }

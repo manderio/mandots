@@ -11,29 +11,32 @@
 		<divider/>
 		<centerside/>
 		<divider/>
-                <rightside/>
+		<rightside/>
             </box>
 	</def>
 	<def name="test">
 	    <box orientation="h" hexpand="false">
-		<info/>
+		<test/>
 	    </box>
 	</def>
 
-        <!-- defining sections of eww bar -->
+	<!-- defining sections of eww bar -->
+
             <def name="leftside" orientation="h" space-evenly="false" halign="start">
                 <box class="workspaces">
                     <workspaces/>
                  </box>
-            </def>
+	     </def>
+
             <def name="centerside" orientation="h" space-evenly="true" halign="center">
                 <box class="time">
                     <time/>
                 </box>
-            </def>
-            <def name="rightside" orientation="h" space-evenly="true" halign="end">
-                <box>
-                    <sysinfo/>
+	    </def>
+
+            <def name="rightside" orientation="h" space-evenly="false" halign="start">
+                <box class="sysinfo">
+		    <sysinfo/>
                 </box>
             </def>
 
@@ -47,17 +50,40 @@
             <box>{{getTime}}</box>
         </def>
 
-        <!-- right side modules -->
-        <def name="sysinfo" halign="end">
-	    <box> |  {{round((EWW_NET[getNet].NET_UP) * 8 / (1024 * 1024), 2)}}  {{round((EWW_NET[getNet].NET_DOWN) * 8 / (1024 * 1024), 2)}} |  {{EWW_RAM}} |  {{round((EWW_DISK["/"].free) / (1024 * 1024 * 1024), 2)}} |  {{EWW_BATTERY.BAT0.capacity}}</box>
-	</def>
-	<def name="divider">
-	    <box>   </box>
+	<!-- right side modules -->
+	<def name="sysinfo" halign="end">
+	    <box space-evenly="false">
+		|<battery/>|
+		<ram/>|
+		<disk/>|
+		<network/>
+	    </box>
 	</def>
 
+	<!-- system information -->
+	<def name="battery" halign="end">
+	 <box class="sysinfo bat">{{batStatus}} {{EWW_BATTERY.BAT0.capacity}} %</box>
+	</def>
+
+	<def name="disk" halign="end">
+	    <box class="sysinfo sect"> {{round((EWW_DISK["/"].free) / (1024 * 1024 * 1024), 0)}}</box> 
+	</def>
+
+	<def name="ram" halign="end">
+	    <box class="sysinfo sect"> {{EWW_RAM}}</box>
+	</def>
+
+	<def name="network" haligh="end">
+	    <box class="sysinfo sect">  {{round((EWW_NET[getNet].NET_UP) * 8 / (1024 * 1024), 1)}}  {{round((EWW_NET[getNet].NET_DOWN) * 8 / (1024 * 1024), 1)}}</box>
+	</def>
+
+	<!-- divider for more even spacing and stuff -->
+	<def name="divider">
+	    <box class="divider"> </box>
+	</def>
 
 	<!-- test section -->
-        <def name="info">
+        <def name="test">
 	    <box class="test">
 		This is for testing, please ignore me!
 	    </box>
@@ -69,10 +95,9 @@
     <!-- script variables -->
     <variables>
 	<script-var name="getWorkspaces">./scripts/workspaces/target/release/workspaces</script-var>
-        <script-var name="getInfo">echo "things"</script-var>
 	<script-var name="getTime" interval="1s">date +"%R:%S | %a %d %b %Y"</script-var>
 	<script-var name="getNet" interval="2s">./scripts/getNet.sh</script-var>
-	<script-var name="batStatus" interval="1m">echo "hello there"</script-var>
+	<script-var name="batStatus" interval="1m">./scripts/batStatus.sh</script-var>
     </variables>
 
     <!-- loaded windows and their settings -->
