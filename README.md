@@ -17,13 +17,14 @@ In case that doesn't work, try running the following:
 ``for f in *; do case $f in [a-z]*) [[ -d "$f" ]] && stow --dir=~/dotfiles -t ~ "$f";; esac; done``
 
 ### Note for wayland branch
-This is ~~completely~~ partially untested and a work in progress. I have to set everything up. 
+This is ~~completely~~ partially untested and a work in progress. Most things are currently in working condition, however, some things still have addtional configuration/things I want to do 
 
 ### To-do:
 - [ ] Fix alias for everything making it all nice and neat
 - [ ] Update nvim config
 - [ ] ~~Create installation script~~
 - [ ] anything else that might come to mind for me 
+- [ ] Finish writing and setting up [remander](https://github.com/manderio/remander) with eww
 - [x] Customize rofi, make it more gruvbox
 - [x] Customize ~~polybar~~ eww, make my own version of it
 - [x] Work on my ~~termite fork~~ alacritty config to set up the keyboard shortcuts better
@@ -32,16 +33,16 @@ This is ~~completely~~ partially untested and a work in progress. I have to set 
 ### Section where I can spend time praising other lovely human beings
 Because in this community we all need to show some love to people/tools that are amazing. Give them a hug and thank them for contributing with great things!
 
-### Tools I use in wayland
+### Tools I use in Wayland
 - [sway](https://swaywm.org/), the wayland version of i3
 - [alacritty](https://github.com/alacritty/alacritty), replacement for termite since it got obsoleted
 - [mako](https://github.com/emersion/mako), notification daemon, replacement for dunst
 - [eww](https://github.com/elkowar/eww), Elkowar's wacky widgets, using the bar functionality as a replacement for polybar
 - [stow](https://www.gnu.org/software/stow/), symlink farm manager for my dotfiles
-- [tbsm](https://github.com/loh-tar/tbsm), a login manager that allows you to log in straight from the terminal! 
 - [rofi](https://github.com/davatorium/rofi), a manager that i use along with [dmenu](https://tools.suckless.org/dmenu/)
 - [nvim](https://github.com/neovim/neovim), what happens if you improve vi twice? this. this is what happens. It's great!
-- [zsh](https://www.zsh.org/), the shell that I use ~~currently the config is too much of a mess for me to upload it here though~~
+- [zsh](https://www.zsh.org/), my shell that I use
+
 
 ### Credit to people who are more talented than me
 Note that while I no longer use some of these, I will still always appreciate and credit the people helping me out below!
@@ -58,3 +59,5 @@ might be viable alternatives for someone looking for a similar wm
 - [termite](https://github.com/thestinger/termite), a terminal with keybind support, yay! less mouse usage!
 - [autorandr](https://github.com/phillipberndt/autorandr), lifesaver if you are using multiple monitors for i3
 - [dunst](https://github.com/dunst-project/dunst), notification dameon, my config is broken, but the tool is lovely
+- [tbsm](https://github.com/loh-tar/tbsm), a login manager that allows you to log in straight from the terminal! 
+- [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh), a shell set up before i wasn't too lazy to do it myself, didn't like the presets so removed it, that's me though
