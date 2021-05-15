@@ -42,7 +42,7 @@ $lightorange: #fe8019;
 * {
     all: unset;
 }
-
+ // window config
 window {
     background-color: $bg;
     color: $fg;
@@ -50,7 +50,8 @@ window {
     font-size: 14px;
 }
 
-.bar {
+// bar config
+.bar0 {
 	background-color: $bg0_h;
 	border-bottom-style: double;
 	border-bottom-color:$fg;
@@ -58,6 +59,15 @@ window {
 	color: $gray;
 }
 
+.bar1 {
+	background-color: $bg0_h;
+	border-bottom-style: double;
+	border-bottom-color:$fg;
+	border-width: 1px;
+	color: $gray;
+}
+
+// workspace config
 .workspaces {
 	padding-left: 5px;
 	padding-right: 10px;
@@ -76,7 +86,7 @@ window {
 }
 
 .workspace.focused {
-	color: $orange;
+	color: $blue;
 	font-weight: bold;
 }
 
@@ -84,11 +94,13 @@ window {
 	color: $gray;
 }
 
+// divider and separator config
 .divider {
 	padding-left: 10px;
 	padding-right: 10px;
 }
 
+// module config -- sysinfo
 .sysinfo {
 	border-top-style: solid;
 	border-top-width: 3px;
@@ -105,4 +117,9 @@ window {
 .sysinfo.bat {
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+// module config -- time
+.time {
+	color: $fg1;
 }

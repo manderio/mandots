@@ -5,7 +5,7 @@
 
     <definitions>
         <!-- the bar itself -->
-        <def name="bar">
+        <def name="bar0">
             <box orientation="h" hexpand="false" space-evenly="true">
 		<leftside/>
 		<divider/>
@@ -14,6 +14,13 @@
 		<rightside/>
             </box>
 	</def>
+	
+        <def name="bar1" class="bar">
+	    <box orientation="h" hexpand="false" space-evenly="true">
+		<centerside/>
+	    </box>
+	</def>
+
 	<def name="test">
 	    <box orientation="h" hexpand="false">
 		<test/>
@@ -102,12 +109,18 @@
 
     <!-- loaded windows and their settings -->
     <windows>
-        <window name="bar" stacking="bt" screen="0" exclusive="true">
+        <window name="bar0" stacking="bt" screen="0" exclusive="true">
             <geometry anchor="top center" x="0px" y="0px" width="100%" height="25px"/>
             <widget>
-                <bar/>
-            </widget>
+                <bar0/>
+	    </widget>
 	</window>
+	 <window name="bar1" stacking="bt" screen="1" exclusive="true">
+            <geometry anchor="top center" x="0px" y="0px" width="100%" height="25px"/>
+	    <widget>
+		<bar1/>
+		</widget>
+	    </window>
 	<window name="test" stacking="bg" screen="0" exclusive="true">
 	    <geometry anchor="bottom center" x="0px" y="0px" width="500px" height="200px"/>
 	    <widget>
