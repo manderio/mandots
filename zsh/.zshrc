@@ -27,13 +27,11 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # tbsm
 case $(tty) in 
-    /dev/tty*) tbsm run 1;;
+    /dev/tty*) sway;;
 esac
 
 # alias
 alias dots='cd ~/dotfiles'
 alias ewwconf='cd ~/.config/eww/ && nvim'
 alias h4ztp='bluetoothctl power on && bluetoothctl connect 4C:87:5D:CB:76:4C'
-alias run-help=man
-alias which-command=whence
 
