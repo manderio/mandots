@@ -42,6 +42,7 @@ $lightorange: #fe8019;
 * {
     all: unset;
 }
+
  // window config
 window {
     background-color: $bg;
@@ -49,6 +50,8 @@ window {
     font-family: 'Source Code Pro';
     font-size: 14px;
 }
+
+
 
 // bar config
 .bar0 {
@@ -123,3 +126,13 @@ window {
 .time {
 	color: $fg1;
 }
+
+// widget-collection config
+.widget-collection {
+	background-color: $bg0;
+}
+
+
+
+
+
