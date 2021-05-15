@@ -219,7 +219,8 @@
 		<widget>
 		    <test/>
 		</widget>
-	    </window>
+	</window>
+
 	    <!-- end test -->
 	</windows>
     </eww>
