@@ -2,5 +2,12 @@ configuration {
  modi: "drun";
  theme: "gruv-sidebar";
  font: "Source Code Pro 11";
+ show-icons: true;
+ icon-theme: "Gruvbox-Material-Dark";
+ padding: 5px;
+ separator-style: "pipe";
+ width: 100px;
+ display-drun: "drun | ";
 }
+
 @import "themes/gruv-sidebar.rasi"
