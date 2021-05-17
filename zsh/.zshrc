@@ -32,6 +32,7 @@ esac
 
 # alias
 alias dots='cd ~/dotfiles'
+alias conf='cd ~/.config && nvim'
 alias ewwconf='cd ~/.config/eww/ && nvim'
 alias h4ztp='bluetoothctl power on && bluetoothctl connect 4C:87:5D:CB:76:4C'
-
+alias ls='ls --color=auto'
