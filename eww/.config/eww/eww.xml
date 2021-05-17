@@ -19,8 +19,10 @@
 
 	<!-- second monitor bar --> 
 	<def name="bar1" class="bar">
-	    <box orientation="h" hexpand="false" space-evenly="true">
-		<centerside/>
+		<box orientation="h" hexpand="false" space-evenly="true">
+			<divider/>
+			<centerside/>
+			<divider/>
 	    </box>
 	</def>
 
@@ -158,8 +160,8 @@
 
 	</definitions>
 
-	<!-- script variables for bar -->
 	<variables>
+	<!-- script variables for bar -->
 	    <script-var name="getWorkspaces">./scripts/workspaces/target/release/workspaces</script-var>
 	    <script-var name="getTime" interval="1s">date +"%R:%S | %a %d %b %Y"</script-var>
 	    <script-var name="getNet" interval="2s">./scripts/getNet.sh</script-var>
@@ -190,7 +192,7 @@
 		</widget>
 	    </window>
 
-	    <!-- for external monitor -->
+	    <!-- for external monitor 1 -->
 	    <window name="bar1" stacking="bt" screen="1" exclusive="true">
 		<geometry anchor="top center" width="100%" height="25px"/>
 		<widget>
@@ -198,17 +200,28 @@
 		</widget>
 	    </window>
 
-	    <!-- end bar -->
+		<!-- for external monitor 2 -->
+		<window name="bar2" stacking="bt" screen="2" exclusive="true">
+		<geometry anchor="top center" width="100%" height="25px"/>
+		<widget>
+		    <bar1/>
+		</widget>
+	    </window>
+		<!-- end bar -->
 
 	    <window name="widget-collection" stacking="ov" screen="1" exclusive="true">
 		<geometry anchor="center center" width="80%" height="80%"/>
 		<widget name="top-right">
+			<test/>
 		</widget>
 		<widget name="top-left">
+			<test/>
 		</widget>
 		<widget name="bottom-right">
+			<test/>
 		</widget>
 		<widget name="bottom-left">
+			<test/>
 		</widget>
 	    </window>
 

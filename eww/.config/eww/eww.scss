@@ -51,8 +51,6 @@ window {
     font-size: 14px;
 }
 
-
-
 // bar config
 .bar0 {
 	background-color: $bg0_h;
@@ -101,6 +99,9 @@ window {
 .divider {
 	padding-left: 10px;
 	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-color: $bg0_h;
 }
 
 // module config -- sysinfo
@@ -125,14 +126,16 @@ window {
 // module config -- time
 .time {
 	color: $fg1;
-}
+	border-top-style: solid;
+	border-top-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: 5px;
+	border-color: $bg0_h;
+	font-size: 15px;
+   }
 
 // widget-collection config
 .widget-collection {
 	background-color: $bg0;
 }
-
-
-
-
 
