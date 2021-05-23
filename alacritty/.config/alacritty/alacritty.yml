@@ -27,6 +27,16 @@ scrolling:
 
 tabspace: 4
 
+font: 
+ normal:
+   family: Source Code Pro
+ bold: 
+   family: Source Code Pro
+ italic:
+   family: Source Code Pro
+ size: 10.0
+
+
 # Colors (Gruvbox dark)
 schemes:
   gruvbox_material_hard_dark: &gruvbox_material_hard_dark

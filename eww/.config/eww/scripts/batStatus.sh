@@ -6,7 +6,7 @@ case $battery in
   Full) echo "";;
   Charging) echo "";;
   Discharging)
-    if [[ "$capacity" -ge 72 ]] && [[ "$capacity" -lt 90 ]]
+    if [[ "$capacity" -ge 72 ]] && [[ "$capacity" -lt 100 ]]
     then
       echo ""
     elif [[ "$capacity" -ge 54 ]] && [[ "$capacity" -lt 72 ]]
