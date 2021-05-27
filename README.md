@@ -10,11 +10,7 @@ CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration. Running Arch L
 ### Applying the dots 
 To add dots, which if you're not mander, I do not quite get why you would want to, but you may, as long as you let people know where you got them, go ahead and use. Everything is managed by stow, so run the following:
 
-``sh -c 'echo [a-z]*' | stow``
-
-In case that doesn't work, try running the following: 
-
-``for f in *; do case $f in [a-z]*) [[ -d "$f" ]] && stow --dir=~/dotfiles -t ~ "$f";; esac; done``
+``stow [a-z]*``
 
 ### Note for wayland branch
 This is ~~completely~~ partially untested and a work in progress. Most things are currently in working condition, however, some things still have addtional configuration/things I want to do 
