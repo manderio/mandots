@@ -52,6 +52,7 @@ Note that while I no longer use some of these, I will still always appreciate an
 - Also, just give an extra hug to [buffet](https://github.com/buffet), he's helped me out a ton and had to listen to me struggle with everything wayland related
 - Back when I used polybar I would use a modified version of [this one](https://github.com/adi1090x/polybar-themes#forest) made by adi1090x, if that doesn't float your boat I am sure you can find something you like there
 - Will link source for my wallpaper here once I find it! Currently I am using a modified version of a modified version I found on the r/UP discord, so yea...
+- Until I have made my own, I am using a GTK gruvbox theme I found [here](https://github.com/sainnhe/gruvbox-material-gtk), will make a hard contrast version, but until then, please show Sainhe some love thank you!
 
 ### Tools I used when I was on x
 might be viable alternatives for someone looking for a similar wm
