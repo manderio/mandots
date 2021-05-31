@@ -32,7 +32,7 @@ bindsym --release Print exec grim | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi
+# start rofi TODO: change this to ;
 bindsym $mod+Shift+period exec rofi -show drun
 # movingg around
 bindsym $mod+h focus left
@@ -123,8 +123,6 @@ client.focused_inactive #ebdbb255 #ebdbb255 #28282855 #ebdbb255 #ebdbb255
 
 # window setup
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enabled
-for_window [class="Lxappearance" instance="lxappearance"] floating enabled
-for_window [class="pulseeffects" instance="pulseeffects"] floating enabled
 for_window [class="Spotify"] move scratchpad
 
 # floating settings

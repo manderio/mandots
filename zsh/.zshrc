@@ -31,7 +31,7 @@ case $(tty) in
 esac
 
 # alias
-alias dots='cd ~/dotfiles'
+alias dots='cd ~/mandots'
 alias conf='cd ~/.config && nvim'
 alias ewwconf='cd ~/.config/eww/ && nvim'
 alias h4ztp='bluetoothctl power on && bluetoothctl connect 4C:87:5D:CB:76:4C'
