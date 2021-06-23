@@ -68,6 +68,14 @@ window {
 	color: $gray;
 }
 
+.bar2 {
+	background-color: $bg0_h;
+	border-bottom-style: double;
+	border-bottom-color:$fg;
+	border-width: 1px;
+	color: $gray;
+}
+
 // workspace config
 .workspaces {
 	padding-left: 5px;

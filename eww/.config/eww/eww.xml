@@ -9,11 +9,11 @@
 	<!-- the bar itself -->
 	<def name="bar0">
 	    <box orientation="h" hexpand="false" space-evenly="true">
-		<leftside/>
-		<divider/>
-		<centerside/>
-		<divider/>
-		<rightside/>
+    		<leftside/>
+	   	  <divider/>
+		    <centerside/>
+		    <divider/>
+		    <rightside/>
 	    </box>
 	</def>
 
@@ -36,19 +36,19 @@
 
 	<def name="leftside" orientation="h" space-evenly="false" halign="start">
 	    <box class="workspaces">
-		<workspaces/>
+	  	  <workspaces/>
 	    </box>
 	</def>
 
 	<def name="centerside" orientation="h" space-evenly="true" halign="center">
 	    <box class="time">
-		<time/>
+		    <time/>
 	    </box>
 	</def>
 
 	<def name="rightside" orientation="h" space-evenly="false" halign="start">
 	    <box class="sysinfo">
-		<sysinfo/>
+		    <sysinfo/>
 	    </box>
 	</def>
 
@@ -92,6 +92,7 @@
 	    <def name="network" haligh="end">
 		<box class="sysinfo sect">  {{round((EWW_NET[getNet].NET_UP) * 8 / (1024 * 1024), 1)}}  {{round((EWW_NET[getNet].NET_DOWN) * 8 / (1024 * 1024), 1)}}</box>
 	    </def>
+      <!-- TODO: handle multiple network connections -->
 
 	    <!-- divider for more even spacing and stuff -->
 	    <def name="divider">
