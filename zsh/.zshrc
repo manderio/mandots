@@ -44,7 +44,7 @@ RPROMPT=\$vcs_info_msg_0_'%f %B%F{yellow}%1~%f%b %F{223}|%F{223} %*'
 
 # path addition
 export PATH="$HOME/.cargo/bin:$PATH" 
-
+export PATH="$HOME/git/qmk_firmware/bin:$PATH"
 # sway 
 case $(tty) in 
     /dev/tty*) sway;;
@@ -57,3 +57,4 @@ alias ewwconf='cd ~/.config/eww/ && nvim'
 alias h4ztp='bluetoothctl power on && bluetoothctl connect 4C:87:5D:CB:76:4C'
 alias ls='ls --color=auto'
 alias gay='mpv --speed=16.0 --loop=yes ~/stuff/gay.gif'
+alias ssh='TERM=xterm-256color ssh'
