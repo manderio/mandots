@@ -51,10 +51,24 @@ case $(tty) in
 esac
 
 # alias
+# formatting aliases
+alias ls='ls --color=auto'
+
+# config edits
 alias dots='cd ~/mandots'
 alias conf='cd ~/.config && nvim'
 alias ewwconf='cd ~/.config/eww/ && nvim'
+
+# device connections
 alias h4ztp='bluetoothctl power on && bluetoothctl connect 4C:87:5D:CB:76:4C'
-alias ls='ls --color=auto'
+
+# networking alias
+alias show='cat'
+alias con='sudo screen /dev/ttyUSB0'
+alias traceroute='traceroute -I --resolve-hostnames'
+alias en='sudo su'
+alias ssh='ssh -v'
+
+# misc alias
 alias gay='mpv --speed=16.0 --loop=yes ~/stuff/gay.gif'
 alias ssh='TERM=xterm-256color ssh'

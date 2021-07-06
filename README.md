@@ -1,6 +1,8 @@
 ## Mandots
 
-These are my dots for my current setup. I use a lot of standard configs, this is mainly for my own sake and backup. If you wish to use, go ahead, but do know that my setup is very much mander specific. Main edits are the ones regarding the sway/i3 keyboard shortcuts. Everything is vim styled.
+These are my dots for my current setup. I use a lot of standard configs, this is mainly for my own sake and backup. If you wish to use, go ahead, but do know that my setup is very much mander specific. Main edits are the ones regarding the sway/i3 keyboard shortcuts. Everything is vim styled, or that is what I am attempting to accomplish.
+
+Also, *if you are using these dots, beware that I am not good at this, and if something breaks, for the love of god, create an issue here before complaining to the authors of the tools*
 
 ### Information about my system
 CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration. Running Arch Linux with Wayland, a lil preview of my system while I do some eww config, please don't read too much into it, you might get a headache:
@@ -26,18 +28,23 @@ Will only apply the zsh and nvim configuration
 This is ~~completely~~ partially untested and a work in progress. Most things are currently in working condition, however, some things still have addtional configuration/things I want to do whenever I have time for it...
 
 ### To-do:
-- [ ] Fix alias for everything making it all nice and neat
-- [x] Update nvim config (although partially done, went back to vim script, sorry elko)
+- [ ] Create installation script for nvim
 - [ ] ~~Create installation script~~ Fixed stow management with simple shell command, TODO: create a script that installs all necessary software, including compiling eww
-- [ ] anything else that might come to mind for me 
 - [ ] Finish writing and setting up [remander](https://github.com/manderio/remande.rs) with eww
+- [ ] Eww part 2 (the welcome screen/splash screen project), on pause until new eww config format is done
+- [ ] Add credits for all vim plugins
+- [ ] Create GTK theme with gruvbox hard contrast rather than the regular soft one that is being used right now
+- [ ] Add Kyria stuff
+- [ ] Update the screenshots for my system
+- [ ] anything else that might come to mind for me 
+
+### Done:
+- [x] Fix alias for everything making it all nice and neat
+- [x] Update nvim config (although partially done, went back to vim script, sorry elko)
 - [x] Customize rofi, make it more gruvbox
 - [x] Customize ~~polybar~~ eww, make my own version of it
 - [x] Work on my ~~termite fork~~ alacritty config to set up the keyboard shortcuts better
 - [x] Fix zsh config
-- [ ] Add credits for all vim plugins
-- [ ] Create GTK theme with gruvbox hard contrast rather than the regular soft one that is being used right now
-
 
 ### Dependencies
 - Nvim config uses [coc](https://github.com/neoclide/coc.nvim) meaning you need to use nodejs in order for it to work. 
@@ -68,7 +75,7 @@ Note that while I no longer use some of these, I will still always appreciate an
 - Will link source for my wallpaper here once I find it! Currently I am using a modified version of a modified version I found on the r/UP discord, so yea...
 - Until I have made my own, I am using a GTK gruvbox theme I found [here](https://github.com/sainnhe/gruvbox-material-gtk), will make a hard contrast version, but until then, please show Sainhe some love thank you!
 
-### Tools I used when I was on x
+### Tools I used when I was on x, or that I have used in the past
 might be viable alternatives for someone looking for a similar wm
 - [i3-gaps](https://github.com/Airblader/i3), a fork of [i3](https://i3wm.org/) that adds gaps to the config
 - [termite](https://github.com/thestinger/termite), a terminal with keybind support, yay! less mouse usage!
