@@ -9,9 +9,6 @@ Plug 'neovimhaskell/haskell-vim'
 " coc plugin, language server support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" gruvbox theme plugin
-Plug 'morhetz/gruvbox'
-
 " gitgutter
 Plug 'airblade/vim-gitgutter'
 
@@ -74,19 +71,6 @@ let g:ctrlp_cmd='CtrlP'
 
 " fix coc
 let g:coc_disable_startup_warning = 1
-
-" fix gruvbox
-set background=dark
-let g:gruvbox_number_column='bg0'
-let g:gruvbox_contrast_dark='hard'
-colorscheme gruvbox
-
-" lightline
-set laststatus=2
-set noshowmode
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
 
 " set up line breaks and tab
 :set linebreak

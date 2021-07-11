@@ -23,7 +23,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # take a screenshot
 bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
@@ -111,15 +111,15 @@ bindsym $mod+Shift+e exit
 ### appearance ###
 
 # gaps
- gaps inner 25
+ gaps inner 20
 
 # borders
 default_border pixel 1
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #ebdbb2ff #ebdbb2ff #282828ff #ebdbb2ff #ebdbb2ff
-client.unfocused        #ebdbb255 #ebdbb255 #28282855 #ebdbb255 #ebdbb255
-client.focused_inactive #ebdbb255 #ebdbb255 #28282855 #ebdbb255 #ebdbb255
+client.focused          #00a2ffff #00a2ffff #101116ff #00a2ffff #00a2ffff
+client.unfocused        #00a2ff55 #00a2ff55 #10111655 #00a2ff55 #00a2ff55
+client.focused_inactive #00a2ff55 #00a2ff55 #10111655 #00a2ff55 #00a2ff55
 
 # window setup
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enabled
@@ -146,6 +146,6 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 input * {
-          xkb_layout se 
+          xkb_layout us 
          # xkb_options compose:altr # TODO: figure out if ralt is correct
 }

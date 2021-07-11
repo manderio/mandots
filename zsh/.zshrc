@@ -39,8 +39,8 @@ zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # prompt
-PROMPT='%(?.%F{175}%n%F{223}@%F{cyan}%m.%F{magenta}%n%F{grey}@%F{166}%m %?) %F{223}%# '
-RPROMPT=\$vcs_info_msg_0_'%f %B%F{yellow}%1~%f%b %F{223}|%F{223} %*'
+PROMPT='%(?.%F{red}%n%F{white}@%F{cyan}%m.%F{magenta}%n%F{green}@%F{white}%m %?) %F{white}%# '
+RPROMPT=\$vcs_info_msg_0_'%f %B%F{white}%1~%f%b %F{blue}|%F{red} %*'
 
 # path addition
 export PATH="$HOME/.cargo/bin:$PATH" 
@@ -72,3 +72,7 @@ alias ssh='ssh -v'
 # misc alias
 alias gay='mpv --speed=16.0 --loop=yes ~/stuff/gay.gif'
 
+# pacman alias
+alias pkginst='sudo pacman -S'
+alias pkgupgr='sudo pacman -Syu'
+alias pkgsrc='pacman -Fy'
