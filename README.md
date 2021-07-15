@@ -63,17 +63,19 @@ Because in this community we all need to show some love to people/tools that are
 - [rofi](https://github.com/davatorium/rofi), a manager that i use along with [dmenu](https://tools.suckless.org/dmenu/)
 - [nvim](https://github.com/neovim/neovim), what happens if you improve vi twice? this. this is what happens. It's great!
 - [zsh](https://www.zsh.org/), my shell that I use
-
+- [phocus](https://github.com/phocus/gtk/), the gtk theme tool I am using
 
 ### Credit to people who are more talented than me
-Note that while I no longer use some of these, I will still always appreciate and credit the people helping me out below!
+Note that while I no longer use some of these, I will still always appreciate and credit the people helping me out below! Open source is best spread by the word of mouth!
 - Vim used to be ~~mainly~~all configured ~~with the help of~~ by [Elkowar](https://github.com/elkowar), he's also been a huge help for everything eww related and patiently standing my feedback, as well as my "I BROKE EWW AGAIN :D", so please give him a hug from me and contribewwt
 - Gruvbox, the superior color scheme, can be found [here](https://github.com/morhetz/gruvbox)
 - Rofi was using the standard sidebar theme, can be found in the original package linked above, in the new dots I've switched out the colors and made it a bit more gruvbox to fit my overall theme
 - Also, just give an extra hug to [buffet](https://github.com/buffet), he's helped me out a ton and had to listen to me struggle with everything wayland related
 - Back when I used polybar I would use a modified version of [this one](https://github.com/adi1090x/polybar-themes#forest) made by adi1090x, if that doesn't float your boat I am sure you can find something you like there
 - Will link source for my wallpaper here once I find it! Currently I am using a modified version of a modified version I found on the r/UP discord, so yea...
-- Until I have made my own, I am using a GTK gruvbox theme I found [here](https://github.com/sainnhe/gruvbox-material-gtk), will make a hard contrast version, but until then, please show Sainhe some love thank you!
+- Before I made my own scheme and started using phocus, I am using a GTK gruvbox theme I found [here](https://github.com/sainnhe/gruvbox-material-gtk), will make a hard contrast version, but until then, please show Sainhe some love thank you!
+- Latest addition to my useful neat tools is [phocus](https://github.com/phocus), it is very modular, highly epic and created by [best boomer](https://github.com/phisch)
+
 
 ### Tools I used when I was on x, or that I have used in the past
 might be viable alternatives for someone looking for a similar wm
