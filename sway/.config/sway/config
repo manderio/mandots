@@ -147,5 +147,6 @@ bindsym $mod+r mode "resize"
 
 input * {
           xkb_layout us 
+          xkb_variant altgr-intl
          # xkb_options compose:altr # TODO: figure out if ralt is correct
 }

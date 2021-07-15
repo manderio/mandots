@@ -39,7 +39,7 @@ zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # prompt
-PROMPT='%(?.%F{red}%n%F{white}@%F{cyan}%m.%F{magenta}%n%F{green}@%F{white}%m %?) %F{white}%# '
+PROMPT='%(?.%F{red}%n%F{white}@%F{green}%m.%F{magenta}%n%F{blue}@%F{red}%m %?) %F{white}%# '
 RPROMPT=\$vcs_info_msg_0_'%f %B%F{white}%1~%f%b %F{blue}|%F{red} %*'
 
 # path addition
@@ -76,3 +76,7 @@ alias gay='mpv --speed=16.0 --loop=yes ~/stuff/gay.gif'
 alias pkginst='sudo pacman -S'
 alias pkgupgr='sudo pacman -Syu'
 alias pkgsrc='pacman -Fy'
+
+# alias for ls
+alias ll='ls -l'
+alias la='ls -la'
