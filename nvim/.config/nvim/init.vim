@@ -21,6 +21,9 @@ Plug 'airblade/vim-gitgutter'
  " nerdtree
  Plug 'preservim/nerdtree'
 
+ " yuck plugin
+ Plug 'elkowar/yuck.vim'
+
 " Initialize plugin system
 call plug#end()
 

@@ -80,3 +80,7 @@ alias pkgsrc='pacman -Fy'
 # alias for ls
 alias ll='ls -l'
 alias la='ls -la'
+
+# alias for misc ricing
+# yuck config example
+alias ewwxample="curl https://raw.githubusercontent.com/elkowar/eww/config_rework/examples/eww-bar/eww.yuck | nvim -c ':set ft=yuck'"

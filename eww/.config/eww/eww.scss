@@ -1,41 +1,31 @@
 // to-do: move colors to global location
-$bg: #1d2021;
-$fg: #ebdbb2;
+$bg: #101116;
+$fg: #ffe6f6;
 
 // background colors
-$bg0_h: #1d2021;
-$bg0: #282828;
-$bg1: #3c3836;
-$bg2: #504945;
-$bg3: #7c6f64;
-$bg4: #7c6f64;
+$bg0_h: #101116;
+$bg0: #101116;
 
 // foreground colors
-$fg: #ebdbb2;
-$fg0: #fbf1c7;
-$fg1: #ebdbb2;
-$fg2: #d5c4a1;
-$fg3: #bdae93;
-$fg4: #a89984;
+$fg1: #ffe6f6;
 
 // grays 
-$gray: #928374;
-$lightgray: #a89984;
-$middlegray: #928374;
+$gray: #4f616e;
+$lightgray: #ffe6f6;
 
 // colors
-$red: #cc241d;
+$red: #db86ba;
 $lightred: #fb4934;
 $green: #98971a;
 $lightgreen: #b8bb26;
 $yellow: #d79921;
 $lightyellow: #fabd2f;
-$blue: #458588;
-$lightblue: #83a598;
-$purple: #b16286;
-$lightpurple: #d3869b;
-$aqua: #689d6a;
-$lightaqua: #8ec07c;
+$blue: #75dbe1;
+$lightblue: #3dbac2;
+$purple: #cbabf8;
+$lightpurple: #a468ff;
+$aqua: #ff76e8;
+$lightaqua: #ff60f9;
 $orange: #d65d0e;
 $lightorange: #fe8019;
 
@@ -55,23 +45,7 @@ window {
 .bar0 {
 	background-color: $bg0_h;
 	border-bottom-style: double;
-	border-bottom-color:$fg;
-	border-width: 1px;
-	color: $gray;
-}
-
-.bar1 {
-	background-color: $bg0_h;
-	border-bottom-style: double;
-	border-bottom-color:$fg;
-	border-width: 1px;
-	color: $gray;
-}
-
-.bar2 {
-	background-color: $bg0_h;
-	border-bottom-style: double;
-	border-bottom-color:$fg;
+	border-bottom-color:$aqua;
 	border-width: 1px;
 	color: $gray;
 }
@@ -79,7 +53,7 @@ window {
 // workspace config
 .workspaces {
 	padding-left: 5px;
-	padding-right: 10px;
+	padding-right: 5px;
 	border-top-style: solid;
 	border-top-width: 3px;
 	border-bottom-style: solid;
@@ -89,13 +63,13 @@ window {
 
 .workspace {
 	padding-left: 5px;
-	padding-right: 10px;
+	padding-right: 5px;
 	font-family: 'Source Code Pro';
 	font-size: 14px;
 }
 
 .workspace.focused {
-	color: $blue;
+	color: $purple;
 	font-weight: bold;
 }
 
@@ -119,6 +93,7 @@ window {
 	border-bottom-style: solid;
 	border-bottom-width: 3px;
 	border-color: $bg0_h;
+        padding-left: 50px;
 }
 
 .sysinfo.sect {
@@ -126,14 +101,9 @@ window {
 	padding-right: 10px;
 }
 
-.sysinfo.bat {
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
 // module config -- time
 .time {
-	color: $fg1;
+	color: $purple;
 	border-top-style: solid;
 	border-top-width: 5px;
 	border-bottom-style: solid;
