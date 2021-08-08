@@ -4,10 +4,16 @@ These are my dots for my current setup. I use a lot of standard configs, this is
 
 Also, *if you are using these dots, beware that I am not good at this, and if something breaks, for the love of god, create an issue here before complaining to the authors of the tools*
 
-### Information about my system
-CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration. Running Arch Linux with Wayland, a lil preview of my system while I do some eww config, please don't read too much into it, you might get a headache:
+### Information about my systems
+I got two systems with two completely different themes, you can find each setup for each branch.
 
-![image](https://user-images.githubusercontent.com/59826300/118331657-2a10a880-b509-11eb-90cb-931e7f8f6299.png)
+- FR4G-TP is my tiny monster, it is my first ever PC build, got AMD Ryzen 7 5800X, AMD Radeon RX 6700X and got 32 GB of ram.
+- CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration.
+
+Both systems run Arch Linux with Wayland. Main difference in rice is color scheme (FR4G got my own color scheme and CL4P got Gruvbox, you can see them both while working on them here:
+![image](https://cdn.discordapp.com/attachments/635625917623828520/873686829449236560/20210807_235812.jpg)
+
+Currently the main repo is my repo for FR4G-TP since it is the rice I am working on, if you rather have my gruvbox rice, then you want the CL4P-TP branch. 
 
 ### Applying the dots 
 To add dots, which if you're not mander, I do not quite get why you would want to, but you may, as long as you let people know where you got them, go ahead and use. Everything is managed by stow, so run the following:
@@ -28,17 +34,24 @@ Will only apply the zsh and nvim configuration
 This is ~~completely~~ partially untested and a work in progress. Most things are currently in working condition, however, some things still have addtional configuration/things I want to do whenever I have time for it...
 
 ### To-do:
-- [ ] Create installation script for nvim
-- [ ] ~~Create installation script~~ Fixed stow management with simple shell command, TODO: create a script that installs all necessary software, including compiling eww
-- [ ] Finish writing and setting up [remander](https://github.com/manderio/remande.rs) with eww
-- [ ] Eww part 2 (the welcome screen/splash screen project), on pause until new eww config format is done
-- [ ] Add credits for all vim plugins
-- [ ] Create GTK theme with gruvbox hard contrast rather than the regular soft one that is being used right now
-- [ ] Add Kyria stuff
-- [ ] Update the screenshots for my system
+- [ ] More eww, making a sidebar for FR4G rather than my previous top bar, got a concept in mind and started a yuck config but this will take a whiiiiileee.
+- [ ] Migrate eww to yuck branch
+- [ ] Fix phocus with correct color scheme
+~~- [ ] Create GTK theme with gruvbox hard contrast rather than the regular soft one that is being used right now~~
 - [ ] anything else that might come to mind for me 
+- [ ] Set up all the color schemes
+- [ ] Change up rofi to become more floaty like everything else in this rice (need to come up with concept tho)
+
+### On-Pause:
+- [ ] ~~Create installation script~~ Fixed stow management with simple shell command, TODO: create a script that installs all necessary software, including compiling eww (this is on pause atm due to FR4G not having all of the shit it needs.)
+- [ ] Finish writing and setting up [remander](https://github.com/manderio/remande.rs) with eww
+- [ ] Create installation script for nvim
+- [ ] Add credits for all vim plugins
+- [ ] Add Kyria stuff
+- [ ] Eww part 2 (the welcome screen/splash screen project), on pause until new eww config format is done and I feel more confident with eww as a whole
 
 ### Done:
+- [x] Update the screenshots for my system
 - [x] Fix alias for everything making it all nice and neat
 - [x] Update nvim config (although partially done, went back to vim script, sorry elko)
 - [x] Customize rofi, make it more gruvbox
@@ -86,4 +99,4 @@ might be viable alternatives for someone looking for a similar wm
 - [tbsm](https://github.com/loh-tar/tbsm), a login manager that allows you to log in straight from the terminal! 
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh), a shell set up before i wasn't too lazy to do it myself, didn't like the presets so removed it, that's me though
 
-Note that the configs won't magically translate to my x tools, I just want to give credit to people who are cooler.
+Note that the configs won't magically translate to my x tools, I just want to give credit to people who are cooler than I will ever be! If you wanna adapt, I won't stop you lol
