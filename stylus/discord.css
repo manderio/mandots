@@ -200,6 +200,10 @@
     }
 
     /* components */
+    #app-mount [aria-label*=" (thread)"] > div {
+        font-size: 12px !important;
+    }
+
     button[class*="lookFilled"] {
         background-color: var(--button) !important;
     }
