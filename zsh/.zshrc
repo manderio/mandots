@@ -81,6 +81,20 @@ alias pkgsrc='pacman -Fy'
 alias ll='ls -l'
 alias la='ls -la'
 
+
+# git alias
+# mandots specific
+alias pushmndr='cd ~/mandots && git push'
+alias pullmndr='cd ~/mandots && git pull'
+
+# git general
+alias push='git push'
+alias pull='git pull'
+alias add='git add'
+alias addall='git add *'
+alias commit='git commit'
+alias ffcommit='git commit -a -m "routine commit, no additional info"'
+
 # alias for misc ricing
 # yuck config example
 alias ewwxample="curl https://raw.githubusercontent.com/elkowar/eww/config_rework/examples/eww-bar/eww.yuck | nvim -c ':set ft=yuck'"
