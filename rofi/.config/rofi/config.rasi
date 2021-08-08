@@ -1,6 +1,6 @@
 configuration {
  modi: "drun";
- theme: "gruv-sidebar";
+ theme: "neon-sidebar.rasi";
  font: "Source Code Pro 11";
  show-icons: true;
  icon-theme: "Gruvbox-Material-Dark";
@@ -10,4 +10,4 @@ configuration {
  display-drun: "drun | ";
 }
 
-@import "themes/gruv-sidebar.rasi"
+@import "themes/neon-sidebar.rasi"
