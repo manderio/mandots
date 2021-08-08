@@ -28,7 +28,7 @@ bindsym $mod+Return exec kitty
 
 # take a screenshot
 bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
-bindsym --release Print exec grim | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
+bindsym --release Print exec grim - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
 
 # kill focused window
 bindsym $mod+Shift+q kill

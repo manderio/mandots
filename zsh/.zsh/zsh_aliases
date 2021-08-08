@@ -24,6 +24,7 @@ alias add='git add'
 alias addall='git add *'
 alias commit='git commit'
 alias ffcommit='git commit -a -m "routine commit, no additional info"'
+alias status='git status'
 
 # kitty
 alias icat='kitty +kitten icat'
