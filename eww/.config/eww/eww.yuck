@@ -1,0 +1,101 @@
+; this is a comment, just a reminder
+; configuring eww bar
+
+; define the bar
+(defwidget bar []
+  (box 
+    :orientation "h"
+    :hexpand false
+    (left)
+    (divider)
+    (center)
+    (divider)
+    (right)
+    )
+  )
+
+; bar sections
+(defwidget left []
+  (box
+    :class "workspaces"
+    :orientation "h"
+    :space-evenly "false"
+    :halign "start"
+    )
+  )
+
+(defwidget center []
+  (box 
+    :orientation "h"
+    :space-evenly true
+    :halign "center"
+    (time))
+  )
+
+(defwidget right []
+  (box
+    :orientation "h"
+    :space-evenly false
+    :halign "end"
+    (sysinfo)
+    )
+  )
+
+; divider
+(defwidget divider []
+  (box
+    :class "divider"))
+
+; modules
+(defwidget time []
+  (box
+    {getTime}))
+
+; system information
+(defwidget sysinfo []
+  (box 
+    :space-evenly false
+;    "|"(battery)"|"
+    (ram)"|"
+;   (disk)"|"
+;    (network)
+    )
+  )
+
+;(defwidget battery []
+;  (box
+;    :haligh "end"
+;    {{batStatus} {EWW_BATTERY.BAT0.capacity} "%"}
+;    )
+;  )
+
+; (defwidget network []
+;   (box
+;     :haligh "end"
+;     {"  "{{round((EWW_NET[getNet].NET_UP) * 8 / (1024 * 1024), 1)}} + "  " + {{round((EWW_NET[getNet].NET_DOWN) * 8 / (1024 * 1024), 1)}}}
+;    )
+;  )
+
+(defwidget ram []
+  (box
+    :halign "end"
+    {" "+{{EWW_RAM}}}
+   )
+ )
+
+; variables
+(defpoll getTime
+  :interval "1s"
+  "date +'%R:%S | %a %d %b %Y'")
+
+; TODO: add getNetwork script
+; (defpoll getNetwork)
+
+; windows 
+(defwindow bar
+  :monitor 0
+  :exclusive true
+  :stacking "bt"
+  :geometry (geometry :anchor "top center" :width "100%" :height "25px")
+  (bar)
+  )

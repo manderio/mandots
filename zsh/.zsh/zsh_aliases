@@ -1,0 +1,48 @@
+
+# alias
+# formatting aliases
+# ls:
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -la'
+
+# networking alias
+alias show='cat'
+alias i='grep'
+alias con='sudo screen /dev/ttyUSB0'
+alias traceroute='traceroute -I --resolve-hostnames'
+alias en='sudo su'
+alias ssh='ssh -v'
+
+# pacman alias
+alias pkginst='sudo pacman -S'
+alias pkgupgr='sudo pacman -Syu'
+alias pkgsrc='pacman -Fy'
+
+# git general
+alias push='git push'
+alias pull='git pull'
+alias add='git add'
+alias addall='git add *'
+alias commit='git commit'
+alias ffcommit='git commit -a -m "routine commit, no additional info"'
+alias status='git status'
+
+# ricing alias
+# mandots specific
+alias pushmndr='cd ~/mandots && git push'
+alias pullmndr='cd ~/mandots && git pull'
+
+# config edits
+alias dots='cd ~/mandots'
+alias conf='cd ~/.config && nvim'
+alias ewwconf='cd ~/.config/eww/ && nvim'
+
+# yuck config example
+alias ewwxample="curl https://raw.githubusercontent.com/elkowar/eww/config_rework/examples/eww-bar/eww.yuck | nvim -c ':set ft=yuck'"
+
+# fun stuff
+alias gay='mpv --speed=16.0 --loop=yes ~/stuff/gay.gif'
+
+# device connections
+alias h4ztp='bluetoothctl power on && bluetoothctl connect 4C:87:5D:CB:76:4C'
