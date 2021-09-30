@@ -24,6 +24,12 @@ Plug 'airblade/vim-gitgutter'
  " nerdtree
  Plug 'preservim/nerdtree'
 
+" eww plugin 
+Plug 'elkowar/yuck.vim'
+
+" parinfer
+Plug 'bhurlow/vim-parinfer'
+
 " Initialize plugin system
 call plug#end()
 
@@ -104,3 +110,6 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+" yuck things
+let g:vim_parinfer_filetypes = ['yuck']
+autocmd BufRead,BufNewFile *.yuck setlocal filetype=yuck

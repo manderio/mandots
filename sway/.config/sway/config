@@ -23,7 +23,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
 
 # take a screenshot
 bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
@@ -33,7 +33,7 @@ bindsym --release Print exec grim | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-
 bindsym $mod+Shift+q kill
 
 # start rofi TODO: change this to ;
-bindsym $mod+Shift+period exec rofi -show drun
+bindsym $mod+Shift+semicolon exec rofi -show drun
 # movingg around
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -146,6 +146,8 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 input * {
-          xkb_layout se 
-         # xkb_options compose:altr # TODO: figure out if ralt is correct
+          xkb_layout us 
+          xkb_variant altgr-intl
+        # xkb_options compose:altr # TODO: figure out if ralt is correct
 }
+
