@@ -17,11 +17,14 @@ font "Source Code Pro 8"
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
-# Use pactl to adjust volume in PulseAudio.
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+# # Use pactl to adjust volume in PulseAudio.
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+
+bindsym $mod+v+j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
+bindsym $mod+v+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -34,7 +37,7 @@ bindsym --release Print exec grim - | tee ~"/.config/sway/scrot/$(date +'scrot-%
 bindsym $mod+Shift+q kill
 
 # start rofi TODO: change this to ;
-bindsym $mod+Shift+period exec rofi -show drun
+bindsym $mod+Shift+semicolon exec rofi -show drun
 # movingg around
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -56,7 +59,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # lock computer
-bindsym $mod+shift+x exec swaylock
+bindsym $mod+shift+x exec swaylock -c 000000
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
