@@ -4,7 +4,6 @@ set $mod Mod4
 
 #initial startup
 output "*" bg /home/mander/.config/media/wallpaper.png fill
-output DP-1 transform 90 pos 1080 0
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
