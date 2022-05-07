@@ -10,7 +10,6 @@ alias show='cat'
 alias con='sudo screen /dev/ttyUSB0'
 alias traceroute='traceroute -I --resolve-hostnames'
 alias en='sudo su'
-alias ssh='ssh -v'
 alias kex='ssh -o KexAlgorithms=diffie-hellman-group1-sha1,ssh-rsa'
 
 # pacman alias
