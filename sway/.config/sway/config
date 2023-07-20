@@ -79,6 +79,7 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
+set $ws9 "9"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -99,6 +100,8 @@ bindsym $mod+Shift+5 move container to workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+
 
 # set up scratchpad shortcuts
 bindsym $mod+Shift+minus move scratchpad
@@ -117,12 +120,12 @@ bindsym $mod+Shift+e exit
  gaps inner 20
 
 # borders
-default_border pixel 1
+default_border pixel 2
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #00a2ffff #00a2ffff #101116ff #00a2ffff #00a2ffff
-client.unfocused        #00a2ff55 #00a2ff55 #10111655 #00a2ff55 #00a2ff55
-client.focused_inactive #00a2ff55 #00a2ff55 #10111655 #00a2ff55 #00a2ff55
+client.focused          #003f5c29 #003f5c29 #101116ff #003f5c29 #003f5c29
+client.unfocused        #003a4730 #003a4730 #10111655 #003a4730 #003a4730
+client.focused_inactive #003a4730 #003a4730 #10111655 #003a4730 #003a4730
 
 # window setup
 for_window [class="Pavucontrol" instance="pavucontrol"] floating enabled
@@ -152,4 +155,9 @@ input * {
           xkb_layout us 
           xkb_variant altgr-intl
          # xkb_options compose:altr # TODO: figure out if ralt is correct
+}
+
+# sway bar
+bar {
+	swaybar_command waybar
 }
