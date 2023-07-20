@@ -11,6 +11,7 @@ alias con='sudo screen /dev/ttyUSB0'
 alias traceroute='traceroute -I --resolve-hostnames'
 alias en='sudo su'
 alias kex='ssh -o KexAlgorithms=diffie-hellman-group1-sha1,ssh-rsa'
+alias ssh='TERM=xterm ssh' 
 
 # pacman alias
 alias pkginst='sudo pacman -S'
