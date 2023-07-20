@@ -35,7 +35,7 @@ This is ~~completely~~ partially untested and a work in progress. Most things ar
 
 ### To-do:
 - [ ] More eww, making a sidebar for FR4G rather than my previous top bar, got a concept in mind and started a yuck config but this will take a whiiiiileee.
-- [ ] Migrate eww to yuck branch
+~~- [ ] Migrate eww to yuck branch~~
 - [ ] Fix phocus with correct color scheme
 ~~- [ ] Create GTK theme with gruvbox hard contrast rather than the regular soft one that is being used right now~~
 - [ ] anything else that might come to mind for me 
@@ -71,7 +71,7 @@ Because in this community we all need to show some love to people/tools that are
 - [sway](https://swaywm.org/), the wayland version of i3
 - [alacritty](https://github.com/alacritty/alacritty), replacement for termite since it got obsoleted
 - [mako](https://github.com/emersion/mako), notification daemon, replacement for dunst
-- [eww](https://github.com/elkowar/eww), Elkowar's wacky widgets, using the bar functionality as a replacement for polybar
+- [waybar](https://github.com/Alexays/Waybar), wayland bar that is highly customiziable
 - [stow](https://www.gnu.org/software/stow/), symlink farm manager for my dotfiles
 - [rofi](https://github.com/davatorium/rofi), a manager that i use along with [dmenu](https://tools.suckless.org/dmenu/)
 - [nvim](https://github.com/neovim/neovim), what happens if you improve vi twice? this. this is what happens. It's great!
@@ -98,5 +98,6 @@ might be viable alternatives for someone looking for a similar wm
 - [dunst](https://github.com/dunst-project/dunst), notification dameon, my config is broken, but the tool is lovely
 - [tbsm](https://github.com/loh-tar/tbsm), a login manager that allows you to log in straight from the terminal! 
 - [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh), a shell set up before i wasn't too lazy to do it myself, didn't like the presets so removed it, that's me though
+- [eww](https://github.com/elkowar/eww), Elkowar's wacky widgets, using the bar functionality as a replacement for polybar
 
 Note that the configs won't magically translate to my x tools, I just want to give credit to people who are cooler than I will ever be! If you wanna adapt, I won't stop you lol
