@@ -3,23 +3,23 @@
 # text
 font=Source Code Pro 10
 text-alignment=left
-format="<b>%a | %s</b>\n%b"
+format=<b>%a | %s</b>\n%b
 
 # colors
-background-color=#282828
-text-color=#ebdbb2
-border-color=#ebdbb2
+background-color=#090300
+text-color=#f7f7f7
+border-color=#3a3432
 
 # size
 width=250
 height=100
 margin=30,30
-padding=5
-border-size=1
+padding=7
+border-size=2
 
 # position
 layer=overlay
-anchor=bottom-right
+anchor=top-right
 
 # other
 icons=0
