@@ -39,7 +39,7 @@ Plug 'shmargum/vim-sass-colors', { 'branch': 'master'}
 call plug#end()
 
 " Color configuration
-set termguicolors
+"  set termguicolors
 
 " keymap configuration
 inoremap <Down> <Nop>
@@ -258,10 +258,10 @@ au BufRead,BufNewFile jenkinsfile set filetype=Jenkinsfile
 
 
 " lightline color scheme
-let g:lightline = {
-      \ 'colorscheme': '16color',
-      \ }
-
+ let g:lightline = {
+       \ 'colorscheme': '16color',
+       \ }
+ 
 " Trying to fix pmenu color
 hi Pmenu ctermfg=255 ctermbg=255 cterm=underline guifg=#ffffff guibg=#151515
 hi PmenuSel cterm=underline ctermfg=255 ctermbg=255  guifg=#FFFFFF guibg=#151515
