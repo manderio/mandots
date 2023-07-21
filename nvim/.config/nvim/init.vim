@@ -263,8 +263,6 @@ au BufRead,BufNewFile jenkinsfile set filetype=Jenkinsfile
        \ }
  
 " Trying to fix pmenu color
-hi Pmenu ctermfg=255 ctermbg=255 cterm=underline guifg=#ffffff guibg=#151515
-hi PmenuSel cterm=underline ctermfg=255 ctermbg=255  guifg=#FFFFFF guibg=#151515
-
-
+hi Pmenu ctermfg=8 ctermbg=16 guifg=#d6d5d4 guibg=#090300
+hi PmenuSel ctermfg=8 ctermbg=16 guifg=#d6d5d4 guibg=#090300
 
