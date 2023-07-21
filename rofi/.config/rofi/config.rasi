@@ -1,12 +1,1 @@
-configuration {
- modi: "drun";
- font: "Source Code Pro 11";
- show-icons: true;
- icon-theme: "Gruvbox-Material-Dark";
- padding: 5px;
- separator-style: "pipe";
- width: 100px;
- display-drun: "drun | ";
-}
-
-@theme "themes/neon-sidebar.rasi"
+@theme "~/.config/rofi/text.rasi"
