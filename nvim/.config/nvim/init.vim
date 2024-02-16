@@ -39,7 +39,7 @@ Plug 'shmargum/vim-sass-colors', { 'branch': 'master'}
 call plug#end()
 
 " Color configuration
-"  set termguicolors
+" set termguicolors
 
 " keymap configuration
 inoremap <Down> <Nop>
