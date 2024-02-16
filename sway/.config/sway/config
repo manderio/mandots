@@ -7,6 +7,11 @@ output "*" bg /home/mander/.config/media/wallpaper.png fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
+include /etc/sway/config.d/*
+
+# swayidle
+exec --no-startup-id swayidle lock swaylock -c 00000000
+exec --no-startup-id dex --autostart --environment sway
 
 # Font for window titles.
 font "Source Code Pro 8" 
@@ -17,10 +22,10 @@ bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
 
 # # Use pactl to adjust volume in PulseAudio.
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
-# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
 bindsym $mod+v+j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
 bindsym $mod+v+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
@@ -103,6 +108,18 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 
+# set up workspaces to specific monitor
+# monitor 1
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+# monitor 2
+workspace 6 output HDMI-A-1
+workspace 7 output HDMI-A-1
+workspace 8 output HDMI-A-1
+workspace 9 output HDMI-A-1
 
 # set up scratchpad shortcuts
 bindsym $mod+Shift+0 move scratchpad
