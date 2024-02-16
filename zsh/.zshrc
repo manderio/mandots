@@ -19,7 +19,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd extendedglob nomatch
 unsetopt beep notify
-bindkey -v
+bindkey -e
 # End of lines configured by zsh-newuser-install
 
 # load plugin manager
