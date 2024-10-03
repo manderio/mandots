@@ -29,6 +29,10 @@ Plug 'airblade/vim-gitgutter'
  " Language packs
  Plug 'sheerun/vim-polyglot'
 
+ " vim goto
+ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+ 
  " Coc
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -39,7 +43,7 @@ Plug 'shmargum/vim-sass-colors', { 'branch': 'master'}
 call plug#end()
 
 " Color configuration
-" set termguicolors
+colorscheme vim
 
 " keymap configuration
 inoremap <Down> <Nop>

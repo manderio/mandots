@@ -1,0 +1,26 @@
+[window]
+     
+padding = { x = 10, y = 10 }
+[colors.primary]
+background = "#090300"
+foreground = "#A5A2A2"
+
+[colors.normal]
+black = "#090300"
+red = "#DB2D20"
+green = "#01A252"
+yellow = "#FDED02"
+blue = "#01A0E4"
+magenta = "#A16A94"
+cyan = "#B5E4F4"
+white = "#A5A2A2"
+
+[colors.bright]
+black = "#5C5855"
+red = "#E8BBD0"
+green = "#3A3432"
+yellow = "#4A4543"
+blue = "#807D7C"
+magenta = "#D6D5D4"
+cyan = "#CDAB53"
+white = "#F7F7F7"

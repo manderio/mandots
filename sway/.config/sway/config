@@ -3,7 +3,6 @@
 set $mod Mod4
 
 #initial startup
-output "*" bg /home/mander/.config/media/wallpaper.png fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
@@ -15,6 +14,8 @@ exec --no-startup-id dex --autostart --environment sway
 
 # Font for window titles.
 font "Source Code Pro 8" 
+
+output "*" background #ffffff solid_color
 
 # use xbacklight to adjust backlight
 # if this does NOT work, try backlightctl instead
@@ -31,7 +32,7 @@ bindsym $mod+v+j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym $mod+v+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # take a screenshot
 bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
@@ -108,19 +109,6 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 
-# set up workspaces to specific monitor
-# monitor 1
-workspace 1 output DP-2
-workspace 2 output DP-2
-workspace 3 output DP-2
-workspace 4 output DP-2
-workspace 5 output DP-2
-# monitor 2
-workspace 6 output HDMI-A-1
-workspace 7 output HDMI-A-1
-workspace 8 output HDMI-A-1
-workspace 9 output HDMI-A-1
-
 # set up scratchpad shortcuts
 bindsym $mod+Shift+0 move scratchpad
 bindsym $mod+0 scratchpad show
@@ -135,13 +123,13 @@ bindsym $mod+Shift+e exit
 ### appearance ###
 
 # gaps
- gaps inner 20
+gaps inner 10
 
 # borders
 default_border pixel 2
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #003f5c29 #003f5c29 #101116ff #003f5c29 #003f5c29
+client.focused          #ffffffff #003f5c29 #101116ff #003f5c29 #ffffffff
 client.unfocused        #003a4730 #003a4730 #10111655 #003a4730 #003a4730
 client.focused_inactive #003a4730 #003a4730 #10111655 #003a4730 #003a4730
 
