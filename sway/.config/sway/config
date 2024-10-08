@@ -3,24 +3,23 @@
 set $mod Mod4
 
 #initial startup
+output "*" bg /usr/share/backgrounds/archlinux/geolanes.png fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
 include /etc/sway/config.d/*
 
-# swayidle
-exec --no-startup-id swayidle lock swaylock -c 00000000
+# swayidl/usr/share/backgrounds/archlinux/geolanes.pngexec --no-startup-id swayidle lock swaylock -c 00000000
 exec --no-startup-id dex --autostart --environment sway
 
 # Font for window titles.
 font "Source Code Pro 8" 
 
-output "*" background #ffffff solid_color
 
 # use xbacklight to adjust backlight
 # if this does NOT work, try backlightctl instead
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight s 5%-
 
 # # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
