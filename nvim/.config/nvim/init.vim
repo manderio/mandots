@@ -35,6 +35,10 @@ Plug 'airblade/vim-gitgutter'
 " SASS CSS
 Plug 'shmargum/vim-sass-colors', { 'branch': 'master'}
 
+" go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+
 " Initialize plugin system
 call plug#end()
 
@@ -63,6 +67,8 @@ vnoremap <C-Left> <Nop>
 vnoremap <C-Right> <Nop>
 
 " plugin configuration
+" Vim-Go
+let g:go_fmt_command = "goimports"
 
 " Ale
 " Disable ale by default
@@ -122,9 +128,7 @@ nnoremap <C-H> <C-W><C-H>
 " if hidden is not set, TextEdit might fail.
 set hidden
 
-" Some servers have issues with backup files, see #649
-set nobackup
-set nowritebackup
+
 
 " Better display for messages
 set cmdheight=2
