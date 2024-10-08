@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 
 " coc needs some work and I haven't had use for it yet
 
+" Tabs
+Plug 'ervandew/supertab'
+
 " ale
 Plug 'dense-analysis/ale'
 
@@ -23,6 +26,7 @@ Plug 'airblade/vim-gitgutter'
 
  " crtlp
  Plug 'ctrlpvim/ctrlp.vim'
+
 " nerdtree
  Plug 'preservim/nerdtree'
 
