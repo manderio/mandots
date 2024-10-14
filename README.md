@@ -5,12 +5,14 @@ These are my dots for my current setup. I use a lot of standard configs, this is
 Also, *if you are using these dots, beware that I am not good at this, and if something breaks, for the love of god, create an issue here before complaining to the authors of the tools*
 
 ### Information about my systems
-I got two systems with two completely different themes, you can find each setup for each branch.
+I got three systems with two completely different themes, you can find each setup for each branch.
 
 - FR4G-TP is my tiny monster, it is my first ever PC build, got AMD Ryzen 7 5800X, AMD Radeon RX 6700X and got 32 GB of ram.
 - CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration.
+- 3g0-tp is a dell xps 13
 
-Both systems run Arch Linux with Wayland. Main difference in rice is color scheme (FR4G got my own color scheme and CL4P got Gruvbox, you can see them both while working on them here:
+Since you are in the FR4G-TP repo, here is a screenshot:
+
 ![image](./example/image.png)
 
 Currently the main repo is my repo for FR4G-TP since it is the rice I am working on, if you rather have my gruvbox rice, then you want the CL4P-TP branch. 
