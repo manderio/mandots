@@ -11,7 +11,7 @@ I got two systems with two completely different themes, you can find each setup 
 - CL4P-TP is a Lenovo ThinkPad T495 with the Ryzen 7 configuration.
 
 Both systems run Arch Linux with Wayland. Main difference in rice is color scheme (FR4G got my own color scheme and CL4P got Gruvbox, you can see them both while working on them here:
-![image](https://cdn.discordapp.com/attachments/635625917623828520/873686829449236560/20210807_235812.jpg)
+![image](./example/image.png)
 
 Currently the main repo is my repo for FR4G-TP since it is the rice I am working on, if you rather have my gruvbox rice, then you want the CL4P-TP branch. 
 
