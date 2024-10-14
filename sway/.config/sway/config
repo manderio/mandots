@@ -3,7 +3,7 @@
 set $mod Mod4
 
 #initial startup
-output "*" bg /home/mander/.config/media/wallpaper.png fill
+output "*" bg ~/.config/sway/wallpaper fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
@@ -11,6 +11,13 @@ include /etc/sway/config.d/*
 
 # swayidle
 exec --no-startup-id swayidle lock swaylock -c 00000000
+# lock computer
+bindsym $mod+shift+x exec swaylock -c 000000
+exec swayidle -w 'swaylock -f -c 000000' \
+	timeout 600 'swaymsg "output * dpms off"' \
+		resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 000000'
+
 exec --no-startup-id dex --autostart --environment sway
 
 # Font for window titles.
@@ -31,7 +38,7 @@ bindsym $mod+v+j exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
 bindsym $mod+v+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec alacritty
 
 # take a screenshot
 bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
@@ -59,11 +66,9 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
-# lock computer
-bindsym $mod+shift+x exec swaylock -c 000000
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle
@@ -171,7 +176,7 @@ bindsym $mod+r mode "resize"
 
 input * {
           xkb_layout us 
-          xkb_variant altgr-intl
+          xkb_variant intl
          # xkb_options compose:altr # TODO: figure out if ralt is correct
 }
 

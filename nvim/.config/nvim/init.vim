@@ -38,6 +38,9 @@ Plug 'shmargum/vim-sass-colors', { 'branch': 'master'}
 " go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" tab
+Plug 'ervandew/supertab'
+
 
 " Initialize plugin system
 call plug#end()
@@ -265,7 +268,85 @@ au BufRead,BufNewFile jenkinsfile set filetype=Jenkinsfile
  let g:lightline = {
        \ 'colorscheme': '16color',
        \ }
- 
+
+" colorscheme vim
+hi clear
+syntax reset
+let g:colors_name = "mander"
+set background=dark
+set t_Co=256
+hi Normal guifg=#f4ecec ctermbg=NONE guibg=#1b1818 gui=NONE
+
+hi DiffText guifg=#ca4949 guibg=NONE
+hi ErrorMsg guifg=#ca4949 guibg=NONE
+hi WarningMsg guifg=#ca4949 guibg=NONE
+hi PreProc guifg=#ca4949 guibg=NONE
+hi Exception guifg=#ca4949 guibg=NONE
+hi Error guifg=#ca4949 guibg=NONE
+hi DiffDelete guifg=#ca4949 guibg=NONE
+hi GitGutterDelete guifg=#ca4949 guibg=NONE
+hi GitGutterChangeDelete guifg=#ca4949 guibg=NONE
+hi cssIdentifier guifg=#ca4949 guibg=NONE
+hi cssImportant guifg=#ca4949 guibg=NONE
+hi Type guifg=#ca4949 guibg=NONE
+hi Identifier guifg=#ca4949 guibg=NONE
+hi PMenuSel guifg=#4b8b8b guibg=NONE
+hi Constant guifg=#4b8b8b guibg=NONE
+hi Repeat guifg=#4b8b8b guibg=NONE
+hi DiffAdd guifg=#4b8b8b guibg=NONE
+hi GitGutterAdd guifg=#4b8b8b guibg=NONE
+hi cssIncludeKeyword guifg=#4b8b8b guibg=NONE
+hi Keyword guifg=#4b8b8b guibg=NONE
+hi IncSearch guifg=#a06e3b guibg=NONE
+hi Title guifg=#a06e3b guibg=NONE
+hi PreCondit guifg=#a06e3b guibg=NONE
+hi Debug guifg=#a06e3b guibg=NONE
+hi SpecialChar guifg=#a06e3b guibg=NONE
+hi Conditional guifg=#a06e3b guibg=NONE
+hi Todo guifg=#a06e3b guibg=NONE
+hi Special guifg=#a06e3b guibg=NONE
+hi Label guifg=#a06e3b guibg=NONE
+hi Delimiter guifg=#a06e3b guibg=NONE
+hi Number guifg=#a06e3b guibg=NONE
+hi CursorLineNR guifg=#a06e3b guibg=NONE
+hi Define guifg=#a06e3b guibg=NONE
+hi MoreMsg guifg=#a06e3b guibg=NONE
+hi Tag guifg=#a06e3b guibg=NONE
+hi String guifg=#a06e3b guibg=NONE
+hi MatchParen guifg=#a06e3b guibg=NONE
+hi Macro guifg=#a06e3b guibg=NONE
+hi DiffChange guifg=#a06e3b guibg=NONE
+hi GitGutterChange guifg=#a06e3b guibg=NONE
+hi cssColor guifg=#a06e3b guibg=NONE
+hi Function guifg=#bd5187 guibg=NONE
+hi Directory guifg=#5485b6 guibg=NONE
+hi markdownLinkText guifg=#5485b6 guibg=NONE
+hi javaScriptBoolean guifg=#5485b6 guibg=NONE
+hi Include guifg=#5485b6 guibg=NONE
+hi Storage guifg=#5485b6 guibg=NONE
+hi cssClassName guifg=#5485b6 guibg=NONE
+hi cssClassNameDot guifg=#5485b6 guibg=NONE
+hi Statement guifg=#7e7777 guibg=NONE
+hi Operator guifg=#7e7777 guibg=NONE
+hi cssAttr guifg=#7e7777 guibg=NONE
+
+
+hi Pmenu guifg=#f4ecec guibg=#454545
+hi SignColumn guibg=#1b1818
+hi Title guifg=#f4ecec
+hi LineNr guifg=#a96b6b guibg=#1b1818
+hi NonText guifg=#c481ff guibg=#1b1818
+hi Comment guifg=#c481ff gui=italic
+hi SpecialComment guifg=#c481ff gui=italic guibg=NONE
+hi CursorLine guibg=#454545
+hi TabLineFill gui=NONE guibg=#454545
+hi TabLine guifg=#a96b6b guibg=#454545 gui=NONE
+hi StatusLine gui=bold guibg=#454545 guifg=#f4ecec
+hi StatusLineNC gui=NONE guibg=#1b1818 guifg=#f4ecec
+hi Search guibg=#c481ff guifg=#f4ecec
+hi VertSplit gui=NONE guifg=#454545 guibg=NONE
+hi Visual gui=NONE guibg=#454545
+
 " Trying to fix pmenu color
 hi Pmenu ctermfg=8 ctermbg=16 guifg=#d6d5d4 guibg=#090300
 hi PmenuSel ctermfg=8 ctermbg=16 guifg=#d6d5d4 guibg=#090300

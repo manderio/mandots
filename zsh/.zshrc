@@ -39,11 +39,16 @@ zstyle ':vcs_info:git:*' formats '%F{magenta}(%b)%r%f'
 zstyle ':vcs_info:*' enable git
 
 # prompt
-PROMPT='%(?.%F{red}%n%F{white}@%F{green}%m.%F{magenta}%n%F{blue}@%F{red}%m %?) %F{white}%# '
+PROMPT='%(?.%F{red}%n%F{white}@%F{cyan}%m.%F{magenta}%n%F{blue}@%F{red}%m %?) %F{white}%# '
 RPROMPT=\$vcs_info_msg_0_'%f %B%F{white}%1~%f%b %F{blue}|%F{red} %*'
 
 # path addition
 export PATH="$HOME/.cargo/bin:$PATH" 
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # sway 
 case $(tty) in 
