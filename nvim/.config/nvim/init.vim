@@ -33,10 +33,6 @@ Plug 'airblade/vim-gitgutter'
  " Language packs
  Plug 'sheerun/vim-polyglot'
 
- " vim goto
- Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
- 
  " Coc
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -77,15 +73,6 @@ vnoremap <C-Right> <Nop>
 " plugin configuration
 " Vim-Go
 let g:go_fmt_command = "goimports"
-
-" Ale
-" Disable ale by default
-autocmd VimEnter * :ALEDisable
-" Fix some formatting
-let g:ale_sign_error = '▍'
-let g:ale_sign_warning = '▍'
-" Toggle ale with ctrl+b
-nnoremap <silent> <C-b> :ALEToggle <CR>
 
 " nerdtree
 autocmd VimEnter * NERDTree | wincmd p

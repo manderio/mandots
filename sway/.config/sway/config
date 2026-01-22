@@ -7,6 +7,8 @@ output "*" bg /usr/share/backgrounds/archlinux/geolanes.png fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
+exec --no-startup-id /usr/bin/wmname LG3D
+exec --no-startup-id systemctl --user start hyprpolkitagent
 include /etc/sway/config.d/*
 
 # swayidl/usr/share/backgrounds/archlinux/geolanes.pngexec --no-startup-id swayidle lock swaylock -c 00000000
@@ -19,7 +21,7 @@ font "Source Code Pro 8"
 # use xbacklight to adjust backlight
 # if this does NOT work, try backlightctl instead
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +5%
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight s 5%-
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 5%-
 
 # # Use pactl to adjust volume in PulseAudio.
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
@@ -34,7 +36,7 @@ bindsym $mod+v+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym $mod+Return exec alacritty
 
 # take a screenshot
-bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
+bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee "/home/mander/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
 bindsym --release Print exec grim - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
 
 # kill focused window
@@ -127,6 +129,9 @@ gaps inner 10
 # borders
 default_border pixel 2
 
+hide_edge_borders smart
+smart_borders on
+
 # class                 border  backgr. text    indicator child_border
 client.focused          #ffffffff #003f5c29 #101116ff #003f5c29 #ffffffff
 client.unfocused        #003a4730 #003a4730 #10111655 #003a4730 #003a4730
@@ -158,8 +163,8 @@ bindsym $mod+r mode "resize"
 
 input * {
           xkb_layout us 
-          xkb_variant altgr-intl
-         # xkb_options compose:altr # TODO: figure out if ralt is correct
+          xkb_variant intl
+          xkb_options compose:altr 
 }
 
 # sway bar

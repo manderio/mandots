@@ -10,7 +10,7 @@
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
-        "all-outputs": true,
+        "all-outputs": false,
         "format": "{name}: {icon}",
         "format-icons": {
             "1": "",
@@ -64,6 +64,7 @@
         "spacing": 10
     },
     "clock": {
+        "interval": 1,
         "format": "{:%H:%M:%S }",
         "format-alt": "{:%Y-%m-%d}"
       
@@ -95,8 +96,8 @@
             "critical": 15
         },
         "format": "{capacity}% ",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
         "format-alt": "{time} ",
     },
     "battery#bat2": {
@@ -108,7 +109,8 @@
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "Disconnected ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "on-click": "nm-applet"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

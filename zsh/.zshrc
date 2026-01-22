@@ -52,3 +52,8 @@ esac
 
 # import alias
 . ~/.zsh/zsh_aliases
+
+# virtualenv 
+eval "$(pyenv init -)"  
+eval "$(pyenv virtualenv-init -)"
+
