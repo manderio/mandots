@@ -1,6 +1,7 @@
-[window]
-     
-padding = { x = 10, y = 10 }
+[window.padding]
+x = 10
+y = 10
+
 [colors.primary]
 background = "#090300"
 foreground = "#A5A2A2"
