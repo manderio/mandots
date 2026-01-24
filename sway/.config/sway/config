@@ -4,6 +4,8 @@ set $mod Mod4
 
 #initial startup
 output "*" bg /usr/share/backgrounds/archlinux/geowaves.png fill
+output HDMI-A-1 pos 3840 0
+output DP-2 pos 1920 0
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
