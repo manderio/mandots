@@ -3,7 +3,7 @@
 set $mod Mod4
 
 #initial startup
-output "*" bg /usr/share/backgrounds/archlinux/geolanes.png fill
+output "*" bg /usr/share/backgrounds/archlinux/geowaves.png fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
 exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
@@ -109,6 +109,19 @@ bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
+
+# set up workspaces to specific monitor
+# monitor 1
+workspace 1 output DP-2
+workspace 2 output DP-2
+workspace 3 output DP-2
+workspace 4 output DP-2
+workspace 5 output DP-2
+# monitor 2
+workspace 6 output HDMI-A-1
+workspace 7 output HDMI-A-1
+workspace 8 output HDMI-A-1
+workspace 9 output HDMI-A-1
 
 # set up scratchpad shortcuts
 bindsym $mod+Shift+0 move scratchpad

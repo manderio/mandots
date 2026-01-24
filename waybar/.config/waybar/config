@@ -1,23 +1,20 @@
 {
-    // "layer": "top", // Waybar at top layer
-     "position": "top", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     "height": 5, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media", "tray", "sway/window"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "network","cpu","memory","battery"],
+    "modules-center": ["clock", "date"],
+    "modules-right": ["pulseaudio", "network","cpu","memory"],
     // Modules configuration
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
         "format": "{name}: {icon}",
         "format-icons": {
-            "1": "",
+            "1": "",
             "2": "",
             "3": "",
             "4": "",
-            "5": "",
             "urgent": "",
             "focused": "",
             "default": ""
@@ -65,16 +62,18 @@
     },
     "clock": {
         "interval": 1,
-        "format": "{:%H:%M:%S }",
-        "format-alt": "{:%Y-%m-%d}"
-      
+        "format": "  {:%H:%M:%S}",
+    },
+    "date": {
+        "interval": 1,
+        "format": "  {:%Y-%m-%d}",
     },
     "cpu": {
-        "format": "cpu: {usage}% ",
+        "format": ": {usage}% ",
         "tooltip": false
     },
     "memory": {
-        "format": "mem: {}% "
+        "format": ": {}% "
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -89,20 +88,6 @@
         "format": "{percent}% ",
         "format-icons": ["", ""]
     },
-    "battery": {
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{capacity}% ",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} ",
-    },
-    "battery#bat2": {
-        "bat": "BAT0"
-    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
@@ -114,7 +99,7 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}%  {format_source}",
+        "format": "{volume}%      {format_source}",
         "format-bluetooth": "{volume}%  {format_source}",
         "format-bluetooth-muted": " {format_source}",
         "format-muted": " {format_source}",
