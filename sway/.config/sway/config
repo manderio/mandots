@@ -3,6 +3,8 @@
 set $mod Mod4
 
 #initial startup
+output HDMI-A-1 pos 3840 0
+output DP-2 pos 1920 0
 output "*" bg ~/.config/sway/wallpaper fill
 exec --no-startup-id mako
 exec --no-startup-id ~/.config/sway/eww.sh 
@@ -41,14 +43,14 @@ bindsym $mod+v+k exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
 bindsym $mod+Return exec alacritty
 
 # take a screenshot
-bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
-bindsym --release Print exec grim - | tee ~"/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
+bindsym --release $mod+shift+s exec grim -g "$(slurp)" - | tee "/home/mander/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png
+bindsym --release Print exec grim - | tee "/home/mander/.config/sway/scrot/$(date +'scrot-%Y-%m-%d-%H%M%S.png')" | wl-copy --type image/png 
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start rofi TODO: change this to ;
-bindsym $mod+Shift+semicolon exec rofi -show drun
+# start rofi on the active monitor
+bindsym $mod+Shift+semicolon exec rofi -show drun -monitor "$(swaymsg -t get_outputs | jq -c '.[] | select(.focused) | select(.id)' | jq -c '.name' | tr -d '\n')"
 # movingg around
 bindsym $mod+h focus left
 bindsym $mod+j focus down

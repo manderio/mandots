@@ -43,7 +43,7 @@ PROMPT='%(?.%F{red}%n%F{white}@%F{cyan}%m.%F{magenta}%n%F{blue}@%F{red}%m %?) %F
 RPROMPT=\$vcs_info_msg_0_'%f %B%F{white}%1~%f%b %F{blue}|%F{red} %*'
 
 # path addition
-export PATH="$HOME/.cargo/bin:$PATH" 
+export PATH="$HOME/.cargo/bin:$HOME/.bin:$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH" 
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -55,5 +55,9 @@ case $(tty) in
     /dev/tty*) sway;;
 esac
 
+# fix burp
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # import alias
 . ~/.zsh/zsh_aliases
+eval "$(pyenv virtualenv-init -)"
