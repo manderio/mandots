@@ -57,3 +57,4 @@ esac
 eval "$(pyenv init -)"  
 eval "$(pyenv virtualenv-init -)"
 
+export EDITOR=vim
